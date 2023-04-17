@@ -1,0 +1,26 @@
+.nav-img{
+    width: 60px;
+    height: 30px;
+}
+
+.navbar-nav li a:hover {
+    color: white;
+    font-size: 120%;
+  }
+
+.btn-danger.search-btn:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.seccion1{
+    background-color: beige;
+}
+
+.seccion2{
+    background-color: lemonchiffon;
+}
+
+.seccion3{
+    background-color: beige;
+}
