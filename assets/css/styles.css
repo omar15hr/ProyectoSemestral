@@ -24,3 +24,13 @@
 .seccion3{
     background-color: beige;
 }
+
+.c-item{
+    height: 480px;
+}
+
+.c-img{
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
