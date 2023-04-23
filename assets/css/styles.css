@@ -66,10 +66,14 @@ Seccion 1 Carrusel
     color: #386641;
 }
 
+#textoCarrusel{
+    margin-top: 5rem;
+}
+
 /*
-========================
-Seccion 2 Contenido del main
-========================
+===========================
+Seccion 2 Contexto del main
+===========================
 */
 #section2{
     background-color: var(--beige-pastel);
@@ -92,7 +96,11 @@ Seccion 2 Contenido del main
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-/* Seccion 3 */
+/* 
+==============================
+Seccion 3 Cards de los platos
+==============================
+*/
 #containerTop{
     margin-top: 1rem;
 }
@@ -110,9 +118,51 @@ Seccion 2 Contenido del main
     background-color: var(--rojo-pastel);
 }
 
+#cardTitle{
+    color: var(--beige-pastel);
+}
+
+#botonS3{
+    background-color: var(--verde-medio);
+    border: none;
+    color: var(--beige-pastel);
+}
+
+#botonS3:hover{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+}
+
 /*
 ========================
-Seccion 4 Cards
+Seccion 4 Contexto eventos
+========================
+*/
+#section4{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+}
+
+#btn_section4{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section4:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#section4Top{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*
+========================
+Seccion 5 Cards
 ========================
 */
 #section4{
@@ -134,6 +184,11 @@ Seccion 4 Cards
     color: var(--beige-pastel);
 }
 
+#tituloProducto{
+    color: var(--verde-oscuro);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 /*
 ========================
 Footer

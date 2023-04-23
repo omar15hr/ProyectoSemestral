@@ -71,27 +71,27 @@
         </div>      
         <div class="carousel-inner">
           <div class="carousel-item active c-item">
-            <img src="assets/img/img11.jpg" class="d-block w-100 c-img" alt="...">
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-              <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
+            <img src="assets/img/img11.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
+              <h6 class="mt-5 fs-8 text-uppercase" ><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
             </div>      
           </div>
           <div class="carousel-item c-item">
-            <img src="assets/img/img2.jpg" class="d-block w-100 c-img" alt="...">
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            <img src="assets/img/img2.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
               <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
             </div>      
           </div>
           <div class="carousel-item c-item">
-            <img src="assets/img/img3.jpg" class="d-block w-100 c-img" alt="...">
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            <img src="assets/img/img3.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
               <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
             </div>      
           </div>
         </div>
@@ -106,7 +106,7 @@
       </div>
     </section>
 
-    <!--Seccion 2-->
+    <!--Seccion 2-- Contexto -->
     <section class="about-section-padding" id="section2">
       <div class="container">
         <div class="row">
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-            <div class="about-text">
+            <div class="about-text mt-4">
               <h2>Seguimos nuestra tradicion Italiana</h2>
               <br>
               <h4>Con el mejor servicio</h4>
@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <!--Seccion 3-->
+    <!--Seccion 3-- Platos con cards -->
     <section class="services section-padding" id="section3">
       <div class="container">
         <div class="row">
@@ -143,34 +143,34 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-4">
-            <div class="card text-white text-center bg-dark pb-2">
-              <div class="card-body" id="cardBody3">
+            <div class="card text-white text-center pb-2" id="cardBody3">
+              <div class="card-body">
                 <i class="bi bi-subtract"></i>
-                <h3 class="card-title">Pizza</h3>
-                <p class="lead">Las mejores tecnicas con nuestras pizzas al horno</p>
-                <button class="btn btn-primary">Conoce más</button>
+                <h3 class="card-title" id="cardTitle">Pizza</h3>
+                <p class="lead" id="cardTitle">Las mejores tecnicas con nuestras pizzas al horno</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-md-12 col-lg-4">
-            <div class="card text-white text-center bg-dark pb-2">
+            <div class="card text-white text-center pb-2" id="cardBody3">
               <div class="card-body">
                 <i class="bi bi-nut"></i>
-                <h3 class="card-title">Pasta</h3>
-                <p class="lead">Hacemos nuestra propia pasta con la receta de la nonna</p>
-                <button class="btn btn-primary">Conoce más</button>
+                <h3 class="card-title" id="cardTitle">Pasta</h3>
+                <p class="lead" id="cardTitle">Hacemos nuestra propia pasta con la receta de la nonna</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-md-12 col-lg-4" id="containerBottom">
-            <div class="card text-white text-center bg-dark pb-2">
+            <div class="card text-white text-center pb-2" id="cardBody3">
               <div class="card-body">
                 <i class="bi bi-heart"></i>
-                <h3 class="card-title">Lasagna</h3>
-                <p class="lead">Con los mejores ingredientes. Hechos en una granja autosustentable.</p>
-                <button class="btn btn-primary">Conoce más</button>
+                <h3 class="card-title" id="cardTitle">Lasagna</h3>
+                <p class="lead" id="cardTitle">Con los mejores ingredientes. Hechos en una granja autosustentable.</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
               </div>
             </div>
           </div>
@@ -178,7 +178,28 @@
       </div>
     </section>
 
-    
+    <!--Seccion 4-- Contexto -->
+    <section class="about-section-padding" id="section4">
+      <div class="container">
+        <div class="row" id="section4Top">
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5" id="section4_">
+            <div class="about-text mt-5">
+              <h2>Conoce nuestros eventos culturales</h2>
+              <br>
+              <h4>Con el mejor animo</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus debitis magni cumque deleniti adipisci eveniet, deserunt nulla omnis reprehenderit commodi animi maiores nostrum nisi sed voluptatem! Explicabo distinctio consequuntur, nostrum omnis officia mollitia quas eos odit modi ipsum nam quo voluptatibus iste at, provident ullam minima sed. Libero, esse veritatis!</p>
+              <br>
+              <button class="btn btn-primary" id="btn_section4" onclick="window.location.href='nosotros.html'">Conoce más</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img">
+              <img src="assets/img/img8.jpg" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   
   </main>
 
