@@ -75,7 +75,7 @@
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
               <h6 class="mt-5 fs-8 text-uppercase" ><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
             </div>      
           </div>
           <div class="carousel-item c-item">
@@ -83,7 +83,7 @@
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
               <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
             </div>      
           </div>
           <div class="carousel-item c-item">
@@ -91,7 +91,7 @@
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
               <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
               <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-              <button class="btn btn-primary mt-3" id="boton-nav">Reserva ya</button>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='eventos.html'">Reserva ya</button>
             </div>      
           </div>
         </div>
@@ -107,15 +107,15 @@
     </section>
 
     <!--Seccion 2-- Contexto -->
-    <section class="about-section-padding" id="section2">
+    <section class="about-section-padding" id="section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-12 col-12" id="section2_">
-            <div class="about-img">
-              <img src="assets/img/img7.jpg" class="img-fluid">
+          <div class="col-lg-4 col-md-12 col-12 my-4">
+            <div class="about-img mt-5">
+              <img src="assets/img/img7.jpg" class="img-fluid rounded">
             </div>
           </div>
-          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="section2Texto">
             <div class="about-text mt-4">
               <h2>Seguimos nuestra tradicion Italiana</h2>
               <br>
@@ -131,7 +131,7 @@
     </section>
 
     <!--Seccion 3-- Platos con cards -->
-    <section class="services section-padding" id="section3">
+    <section class="services section-padding" id="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12" id="containerTop">
@@ -179,22 +179,26 @@
     </section>
 
     <!--Seccion 4-- Contexto -->
-    <section class="about-section-padding" id="section4">
+    <section class="about-section-padding" id="section">
       <div class="container">
         <div class="row" id="section4Top">
-          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5" id="section4_">
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="section4_">
             <div class="about-text mt-5">
               <h2>Conoce nuestros eventos culturales</h2>
+
               <br>
               <h4>Con el mejor animo</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus debitis magni cumque deleniti adipisci eveniet, deserunt nulla omnis reprehenderit commodi animi maiores nostrum nisi sed voluptatem! Explicabo distinctio consequuntur, nostrum omnis officia mollitia quas eos odit modi ipsum nam quo voluptatibus iste at, provident ullam minima sed. Libero, esse veritatis!</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet quae beatae similique, explicabo accusamus excepturi unde illo atque non at facere voluptatum placeat esse eligendi. Adipisci natus distinctio numquam exercitationem. At quia illum id accusantium debitis quisquam, voluptatum aut? Aliquam impedit, ratione quod earum dignissimos laboriosam ut tempore qui.</p>
               <br>
-              <button class="btn btn-primary" id="btn_section4" onclick="window.location.href='nosotros.html'">Conoce más</button>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus incidunt reprehenderit exercitationem amet iusto in hic tempora facere. Rem excepturi quisquam itaque pariatur voluptas harum quis consequuntur doloribus eligendi laboriosam.</p>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatem ex ipsam maiores voluptatibus, provident possimus? Possimus expedita illo voluptates laudantium ipsum similique maiores sequi doloribus aliquam repellat porro repellendus ipsam, libero esse amet, quod natus maxime necessitatibus at voluptate.</p>
+              <button class="btn btn-primary mt-4" id="btn_section4" onclick="window.location.href='eventos.html'">Conoce más</button>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-12">
-            <div class="about-img">
-              <img src="assets/img/img8.jpg" class="img-fluid">
+            <div class="about-img my-5">
+              <img src="assets/img/img8.jpg" class="img-fluid rounded">
             </div>
           </div>
         </div>
@@ -216,16 +220,16 @@
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
-            <p><a href="#" class="f-text">Pizza</a></p>
-            <p><a href="#" class="f-text">Lasagna</a></p>
-            <p><a href="#" class="f-text">Pasta</a></p>
+            <p><a href="productos.html" class="f-text">Pizza</a></p>
+            <p><a href="productos.html" class="f-text">Lasagna</a></p>
+            <p><a href="productos.html" class="f-text">Pasta</a></p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
             <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
-            <p><a href="#" class="f-text">Noche romana</a></p>
-            <p><a href="#" class="f-text">Tarde Napolitana</a></p>
-            <p><a href="#" class="f-text">Dia en Milan</a></p>
+            <p><a href="eventos.html" class="f-text">Noche romana</a></p>
+            <p><a href="eventos.html" class="f-text">Tarde Napolitana</a></p>
+            <p><a href="eventos.html" class="f-text">Dia en Milan</a></p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">

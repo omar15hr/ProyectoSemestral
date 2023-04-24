@@ -71,15 +71,25 @@ Seccion 1 Carrusel
 }
 
 /*
+=====================================
+        TODAS LAS SECCIONES
+=====================================
+*/
+#section{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+    display: flex;
+}
+/*
+=====================================
+         PAGINA INDEX/HOME
+=====================================
+*/
+/*
 ===========================
 Seccion 2 Contexto del main
 ===========================
 */
-#section2{
-    background-color: var(--beige-pastel);
-    color: var(--verde-oscuro);
-}
-
 #btn_section2{
     background-color: #386641;
     color: var(--beige-pastel);
@@ -92,8 +102,8 @@ Seccion 2 Contexto del main
     border: none;
 }
 
-#section2_{
-    margin-top: 2rem;
+#section2Texto{
+    margin-top: 7rem;
     margin-bottom: 2rem;
 }
 /* 
@@ -107,11 +117,6 @@ Seccion 3 Cards de los platos
 
 #containerBottom{
     margin-bottom: 2rem;
-}
-
-#section3{
-    background-color: var(--beige-pastel);
-    color: var(--verde-oscuro);
 }
 
 #cardBody3{
@@ -138,11 +143,6 @@ Seccion 3 Cards de los platos
 Seccion 4 Contexto eventos
 ========================
 */
-#section4{
-    background-color: var(--beige-pastel);
-    color: var(--verde-oscuro);
-}
-
 #btn_section4{
     background-color: #386641;
     color: var(--beige-pastel);
@@ -154,31 +154,16 @@ Seccion 4 Contexto eventos
     color: var(--beige-pastel);
     border: none;
 }
-
-#section4Top{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
+/*
+=====================================
+        PAGINA PRODUCTOS
+=====================================
+*/
 /*
 ========================
 Seccion 5 Cards
 ========================
 */
-#section4{
-    background-color: var(--beige-pastel);
-    display: flex;
-}
-
-#cards{
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-#cardsp{
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5)
-}
-
 #cardtext{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
@@ -188,6 +173,37 @@ Seccion 5 Cards
     color: var(--verde-oscuro);
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+/*
+========================
+Seccion 6 Texto
+========================
+*/
+#section6{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#imagen1Producto{
+    height: 400px;
+    width: 450px;
+}
+/*
+=====================================
+           PAGINA EVENTOS
+=====================================
+*/
+/*
+========================
+Seccion 9 Eventos
+========================
+*/
+#imagenesEvento{
+    height: 200px
+}
+#cardtextEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
 }
 /*
 ========================
