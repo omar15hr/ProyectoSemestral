@@ -60,13 +60,15 @@
         </div>
     </nav> 
 
-    <!--Seccion 14 -- Formulario -->
-    <section id="section13">
+    <!--Seccion 13 -- Formulario -->
+    <section id="section">
       
-      <div class="container">
-        <h3>Formulario de Contacto</h3>
+      <div class="container" id="section13">
+        
         <div class="row">
+          <h3>Formulario de Contacto</h3>
           <form>
+            <!--nombre-->
             <div class="mb-3">
               <label for="nombreFormulario">Nombre:</label>
               <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos.">
@@ -78,6 +80,7 @@
               <input type="tel" class="form-control" id="telefonoFormulario" placeholder="Formato: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
             </div>
 
+            <!--email-->
             <div class="mb-3">
               <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
               <input type="email" class="form-control" id="emailFormulario" aria-describedby="emailAyuda">
@@ -105,14 +108,16 @@
               <label class="form-check-label" for="servicioDFormulario">Delivery</label>
             </div>
 
+            <!--comentarios opcionales-->
             <div class="mb-3">
               <label for="comentarioFormulario">Comentarios (opcional):</label>
               <input type="text" class="form-control" id="nombre" name="comentarioFormulario">
             </div>
 
+            <!--botones para enviar y para borrar la información ingresada. EL ENVIAR SE HACE CON UN POST PARA QUE LA INFO NO APAREZCA EN LA URL-->
             <div>
-              <button type="submit" class="btn btn-primary">Enviar Información</button>
-              <button type="reset" class="btn btn-primary">Cancelar</button>
+              <button type="submit" class="btn btn-primary" id="btn_section13">Enviar Información</button>
+              <button type="reset" class="btn btn-primary" id="btn_section13">Borrar información</button>
             </div>
 
           </form>
