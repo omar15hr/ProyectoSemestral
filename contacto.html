@@ -62,12 +62,14 @@
 
     <!--Seccion 14 -- Formulario -->
     <section id="section13">
+      
       <div class="container">
+        <h3>Formulario de Contacto</h3>
         <div class="row">
           <form>
             <div class="mb-3">
               <label for="nombreFormulario">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombreFormulario">
+              <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos.">
             </div>
 
             <!--el formato de teléfono debe ajustarse a los números chilenos, verificar para móvil y fijo-->
@@ -82,10 +84,11 @@
               <div id="emailAyuda" class="form-text">Su correo electrónico no será compartido con ninguna persona o entidad externa.</div>
             </div>
             
-            <!--el rut hasta el momento se ingresaría como una cadena de texto simple, ver si queremos que sea separado por numrun y dígito verificador-->
+            <!--el rut lo trabajaremos como numrun y dv-->
             <div class="mb-3">
               <label for="rutFormulario" class="form-label">RUT:</label>
-              <input type="text" class="form-control" id="rut" name="rutFormulario">
+              <input type="text" class="form-control" id="rut" name="rutFormulario" placeholder="Ingrese su rut con un formato válido.">
+              <div id="rutAyuda" class="form-text">El RUT debe escribirse sin puntos y con guión. Ejemplo: 12345678-9.</div>
             </div>
 
             <!--indicar si el cliente quiere delivery o reservar para consumir o retirar en el local-->
@@ -108,7 +111,8 @@
             </div>
 
             <div>
-              <input type="reset" value="Cancelar">
+              <button type="submit" class="btn btn-primary">Enviar Información</button>
+              <button type="reset" class="btn btn-primary">Cancelar</button>
             </div>
 
           </form>
