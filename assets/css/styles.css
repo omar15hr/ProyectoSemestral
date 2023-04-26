@@ -205,7 +205,32 @@ Seccion 9 Eventos
     background-color: var(--verde-oscuro);
     color: var(--beige-pastel);
 }
+
 /*
+=====================================
+           PAGINA Contacto
+=====================================
+*/
+/*
+========================
+Seccion 13 Formulario de Contacto
+========================
+*/
+
+#btn_section13{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section13:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+/*
+
 ========================
 Footer
 ========================
