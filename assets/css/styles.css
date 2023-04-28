@@ -264,3 +264,22 @@ footer a{
     border: beige;
     color: #bc4749;
 }
+
+/*ESTILO DEL MAPA*/
+#myMap{
+    height: 300px;
+    width: 700px;
+}
+
+/*ESTILO DE LA TARJETA DEL CLIMA*/
+.weather-card{
+    background-color: var(--rojo-pastel)
+}
+
+#card-clima{
+    background-color: var(--rojo-pastel);
+}
+
+.card-clima{
+    background-color: var(--rojo-pastel);
+}
