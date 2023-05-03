@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head> 
 
-<body>
+<body> 
 
   <!--Main-->
   <main>
@@ -117,8 +117,6 @@
           </div>
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="section2Texto">
             <div class="about-text mt-4">
-              <p>La fecha actual es: <span id="fecha"></span></p>
-              <p>La hora actual es: <span id="hora"></span></p>
               <h2>Seguimos nuestra tradicion Italiana</h2>
               <br>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus debitis magni cumque deleniti adipisci eveniet, deserunt nulla omnis reprehenderit commodi animi maiores nostrum nisi sed voluptatem! Explicabo distinctio consequuntur, nostrum omnis officia mollitia quas eos odit modi ipsum nam quo voluptatibus iste at, provident ullam minima sed. Libero, esse veritatis!</p>
@@ -131,9 +129,26 @@
       </div>
     </section>
 
+    <!--Section EXTRA FUNCION RELOJ-->
+    <section id="section">
+      <div class="col-md-6">
+          <div class="clockdate mt-5">
+            <span id="hora"></span>
+            <span id="fecha"></span>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center" id="texto-hora">
+          <h3>¡Ve la hora!</h3>
+          <h5>¿Aun no reservas una mesa?</h5>
+          <button class="btn btn-primary" id="boton-hora">Reserva ya</button>
+        </div>
+      </div>
+    </section>
+
     <!--Seccion 3-- Platos con cards -->
     <section class="services section-padding" id="section">
-      <div class="container">
+      <div class="container" id="cartas">
         <div class="row">
           <div class="col-md-12" id="containerTop">
             <div class="section-header text-center pb-5">
@@ -282,8 +297,9 @@
 
 
   <!--LINK DE JQUERY-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--BOOTSTRAP-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <!--LINK API LEAFLET-->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="

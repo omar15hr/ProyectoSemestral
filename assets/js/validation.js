@@ -1,17 +1,27 @@
 //FUNCION JQUERY PARA MOSTRAR FECHA Y HORA EN TODAS LAS PAGINAS
 $(document).ready(function() {
-    // Función para mostrar la fecha y hora actual
-    function mostrarFechaHora() {
-      var fechaHora = new Date();
-      var fecha = fechaHora.toLocaleDateString();
-      var hora = fechaHora.toLocaleTimeString();
-      $('#fecha').text(fecha);
-      $('#hora').text(hora);
-    }
+  function mostrarFechaActualizable() {
+    let fecha = new Date();
+    let dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    let dia = dias[fecha.getDay()];
+    let diaNumero = fecha.getDate();
+    let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    let mes = meses[fecha.getMonth()];
+    let anio = fecha.getFullYear();
+    let hora = fecha.getHours();
+    let minutos =  String(fecha.getMinutes()).padStart(2, "0");
+    let segundos = String(fecha.getSeconds()).padStart(2, "0");
+    let horaCompleta = hora + ':' + minutos + ':' + segundos;
+    let fechaCompleta = dia + ', ' + diaNumero + ' de ' + mes + ' de ' + anio;
+    $('#hora').html(horaCompleta);
+    $('#fecha').html(fechaCompleta);
+    let tiempo = setTimeout(function() {
+      mostrarFechaActualizable()
+    }, 1000);
+  }
   
-    // Actualizar la hora cada segundo
-    setInterval(mostrarFechaHora, 1000);
-  });
+  mostrarFechaActualizable();
+});
 
 //FUNCION DEL CLIMA ACTUAL
 const apiKey = "de4bde4d30f29e5059da40005d30614b";

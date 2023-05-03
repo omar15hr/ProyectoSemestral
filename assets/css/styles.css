@@ -108,9 +108,57 @@ Seccion 2 Contexto del main
 }
 /* 
 ==============================
+Seccion EXTRA RELOJ
+==============================
+*/
+.clockdate{
+    padding: 25px 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s;
+    align-items: center;
+    display: flex;
+    margin-left: 5rem;
+}
+
+.clockdate:hover{
+    box-shadow: none;
+}
+
+span:first-child{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 50px;
+}
+
+#texto-hora{
+    margin-top: 3rem;
+}
+
+#boton-hora{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+    margin-top: 1rem;
+}
+
+#boton-hora:hover{
+    background-color: var(--verde-oscuro);
+    border: none;
+}
+
+
+/* 
+==============================
 Seccion 3 Cards de los platos
 ==============================
 */
+#cartas{
+    margin-top: 4rem;
+}
 #containerTop{
     margin-top: 1rem;
 }
