@@ -166,15 +166,29 @@
               <h3>Mapa de Santiago de Chile</h3>
               <div id="myMap"></div>
             </div>
+
             <div class="col-4">
-              <div class="card text-center mt-5">
-                <div class="card-body" id="card-clima">
-                  <i class="fa-solid fa-sun" id="card-clima"></i>
-                  <h3 class="card-title" id="card-clima">Clima actual de Chile</h3>
-                  <p class="card-clima"><i class="fa-solid fa-temperature-half" id="card-clima"></i> Temperatura: <span id="temperature" class="card-clima"></span> grados Celsius</p>
-                  <p class="card-clima"><i class="fa-solid fa-file-lines" id="card-clima"></i> Descripción: <span id="description" class="card-clima"></span></p>
-                  <p class="card-clima"><i class="fa-solid fa-city" id="card-clima"></i> Ciudad: <span id="city" class="card-clima"></span></p>
-                  <p class="card-clima"><i class="fa-solid fa-globe"id="card-clima"></i> País: <span id="country" class="card-clima"></span></p>
+              <div class="card" id="carta-clima">
+                <div class="weather">
+                  <img src="assets/img/clear.png" class="weather-icon">
+                  <h2 id="temperatura"></h2>
+                  <h3 id="ciudad"></h3>
+                  <div class="details">
+                    <div class="col">
+                      <img src="assets/img/humidity.png">
+                      <div id="texto-humedad">
+                        <h6>Humedad</h6>
+                        <h6 id="humedad"></h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <img src="assets/img/wind.png">
+                      <div id="texto-viento">
+                        <h6>Velocidad viento</h6>
+                        <h6 id="viento"></h6>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -187,7 +201,7 @@
               <p>&copy;Copyright 2023 Todos los derechos reservados</p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
