@@ -1,47 +1,44 @@
 //FUNCION JQUERY PARA MOSTRAR FECHA Y HORA EN TODAS LAS PAGINAS
-$(document).ready(function() {
-  function mostrarFechaActualizable() {
-    let fecha = new Date();
-    let dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-    let dia = dias[fecha.getDay()];
-    let diaNumero = fecha.getDate();
-    let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    let mes = meses[fecha.getMonth()];
-    let anio = fecha.getFullYear();
-    let hora = fecha.getHours();
-    let minutos =  String(fecha.getMinutes()).padStart(2, "0");
-    let segundos = String(fecha.getSeconds()).padStart(2, "0");
-    let horaCompleta = hora + ':' + minutos + ':' + segundos;
-    let fechaCompleta = dia + ', ' + diaNumero + ' de ' + mes + ' de ' + anio;
-    $('#hora').html(horaCompleta);
-    $('#fecha').html(fechaCompleta);
-    let tiempo = setTimeout(function() {
-      mostrarFechaActualizable()
-    }, 1000);
-  }
-  
-  mostrarFechaActualizable();
-});
+const deg = 6;
+const hr = $('#hr');
+const mn = $('#mn');
+const sc = $('#sc');
+
+setInterval(function() {
+  let day = new Date();
+  let hh = day.getHours() * 30;
+  let mm = day.getMinutes() * deg;
+  let ss = day.getSeconds() * deg;
+
+  hr.css('transform', `rotateZ(${(hh)+(mm/12)}deg)`);
+  mn.css('transform', `rotateZ(${(mm)}deg)`);
+  sc.css('transform', `rotateZ(${(ss)}deg)`);
+}, 1000);
 
 //FUNCION DEL CLIMA ACTUAL
-const apiKey = "de4bde4d30f29e5059da40005d30614b";
-const url = `http://api.openweathermap.org/data/2.5/weather?q=Chile&appid=${apiKey}`;
+$(document).ready(function() {
+  var apiKey = 'de4bde4d30f29e5059da40005d30614b'; // Reemplaza TU_API_KEY con tu propia clave de API de OpenWeatherMap
+  var url = 'https://api.openweathermap.org/data/2.5/weather?q=Santiago,cl&appid=' + apiKey;
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    const temperature = Math.round(data.main.temp - 273.15); // Convertir de Kelvin a Celsius
-    const description = data.weather[0].description;
-    const city = data.name;
-    const country = data.sys.country;
+  $.ajax({
+    url: url,
+    dataType: 'json',
+    success: function(data) {
+      let temperatura = Math.round(data.main.temp - 273.15);
+      let humedad = data.main.humidity;
+      let velocidadViento = data.wind.speed;
+      let ciudad = data.name;
 
-// Aquí se muestra la información en los elementos span
-    document.getElementById("temperature").textContent = temperature;
-    document.getElementById("description").textContent = description;
-    document.getElementById("city").textContent = city;
-    document.getElementById("country").textContent = country;
-  })
-  .catch(error => console.error(error));
+      document.getElementById("temperatura").innerHTML = temperatura;
+      document.getElementById("ciudad").innerHTML = ciudad;
+      document.getElementById("viento").innerHTML = velocidadViento;
+      document.getElementById("humedad").innerHTML = humedad;
+    },
+    error: function() {
+      console.log('Error al obtener la información del clima de Santiago de Chile');
+    }
+  });
+});
 
 //FUNCION DE MAPA
 const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
