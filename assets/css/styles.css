@@ -275,15 +275,9 @@ Seccion 4 Contexto eventos
 Seccion 5 Cards
 ========================
 */
-#cardtext{
+#cartasProductos{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
-}
-
-#tituloProducto{
-    color: var(--verde-oscuro);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 /*
 ========================
@@ -305,32 +299,6 @@ Seccion 6 Texto
         PAGINA Nosotros
 =====================================
 */
-/*
-========================
-Seccion 11 Cards
-========================
-*/
-#cardtextr{
-    background-color: var(--rojo-pastel);
-    color: var(--beige-pastel);
-}
-
-#cardtextb{
-    background-color: var(--beige-pastel);
-    color: var(--beige-pastel);
-}
-
-#cardtextv{
-    background-color: var(--verde-medio);
-    color: var(--beige-pastel);
-}
-
-#tituloNosotros{
-    color: var(--verde-oscuro);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
 /*
 ========================
 Seccion 12 Texto
