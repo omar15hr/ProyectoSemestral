@@ -26,7 +26,7 @@ Barra de navegacion
 }
 
 .navbar-nav li a:hover {
-    color: white;
+    color: var(--beige-pastel);
     font-size: 120%;
 }
 
@@ -36,11 +36,15 @@ Barra de navegacion
 
 .btn-danger.search-btn:hover {
     background-color: #ff0000;
-    color: white;
+    color: var(--beige-pastel);
 }
 
 #activo{
     color: #ff0000;
+}
+
+.navbar-brand i{
+    color: var(--beige-pastel);
 }
 
 /*
@@ -62,15 +66,216 @@ Seccion 1 Carrusel
     color: #386641;
 }
 
+#textoCarrusel{
+    margin-top: 5rem;
+}
 
+/*
+=====================================
+        TODAS LAS SECCIONES
+=====================================
+*/
+#section{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+    display: flex;
+}
+/*
+=====================================
+         PAGINA INDEX/HOME
+=====================================
+*/
+/*
+===========================
+Seccion 2 Contexto del main
+===========================
+*/
+#btn_section2{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section2:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#section2Texto{
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+/* 
+==============================
+Seccion 3 Cards de los platos
+==============================
+*/
+#containerTop{
+    margin-top: 1rem;
+}
+
+#containerBottom{
+    margin-bottom: 2rem;
+}
+
+#cardBody3{
+    background-color: var(--rojo-pastel);
+}
+
+#cardTitle{
+    color: var(--beige-pastel);
+}
+
+#botonS3{
+    background-color: var(--verde-medio);
+    border: none;
+    color: var(--beige-pastel);
+}
+
+#botonS3:hover{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+}
 
 /*
 ========================
-Seccion 2 Cards
+Seccion 4 Contexto eventos
+========================
+*/
+#btn_section4{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section4:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+/*
+=====================================
+        PAGINA PRODUCTOS
+=====================================
+*/
+/*
+========================
+Seccion 5 Cards
+========================
+*/
+#cardtext{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+}
+
+#tituloProducto{
+    color: var(--verde-oscuro);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+/*
+========================
+Seccion 6 Texto
+========================
+*/
+#section6{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#imagen1Producto{
+    height: 400px;
+    width: 450px;
+}
+/*
+=====================================
+        PAGINA Nosotros
+=====================================
+*/
+/*
+========================
+Seccion 11 Cards
+========================
+*/
+#cardtextr{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+}
+
+#cardtextb{
+    background-color: var(--beige-pastel);
+    color: var(--beige-pastel);
+}
+
+#cardtextv{
+    background-color: var(--verde-medio);
+    color: var(--beige-pastel);
+}
+
+#tituloNosotros{
+    color: var(--verde-oscuro);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*
+========================
+Seccion 12 Texto
+========================
+*/
+#section12{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#imagen1Nosotros{
+    height: 400px;
+    width: 450px;
+}
+/*
+=====================================
+           PAGINA EVENTOS
+=====================================
+*/
+/*
+========================
+Seccion 9 Eventos
+========================
+*/
+#imagenesEvento{
+    height: 200px
+}
+#cardtextEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+}
+
+/*
+=====================================
+           PAGINA Contacto
+=====================================
+*/
+/*
+========================
+Seccion 13 Formulario de Contacto
 ========================
 */
 
+#btn_section13{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section13:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
 /*
+
 ========================
 Footer
 ========================
@@ -85,7 +290,7 @@ Footer
 }
 
 footer *{
-    color: white;
+    color: var(--beige-pastel);
     background-color: var(--verde-oscuro);
 }
 
@@ -102,7 +307,7 @@ footer img{
 }
 
 .f-text{
-    color: white;
+    color: var(--beige-pastel);
 }
 
 .f-text:hover{

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-CL">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,9 @@
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!--LINK DE BOOTSTRAP-->
+    <!--LINKS DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!--LINK DE JAVASCRIPT-->
     <script src="assets/js/validation"></script>
     
@@ -21,161 +22,236 @@
 
 <body>
 
-    <main>
+  <!--Main-->
+  <main>
 
-      <!--Barra de Navegacion-->
-      <nav class="navbar navbar-expand-sm navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#home.html">
-              <i>Italianisimo</i>
-              <img class="nav-img" src="assets/img/img1.png" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="eventos.html">Eventos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Busca aqui...">
-                <button class="btn btn-danger search-btn" type="button">Buscar</button>
-              </form>
-            </div>
-          </div>
-      </nav> 
-
-      <!--Seccion 1 Carrusel-->
-      <section class="section1">
-        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>      
-          <div class="carousel-inner">
-            <div class="carousel-item active c-item">
-              <img src="assets/img/img11.jpg" class="d-block w-100 c-img" alt="...">
-              <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-                <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
-                <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-                <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
-              </div>      
-            </div>
-            <div class="carousel-item c-item">
-              <img src="assets/img/img2.jpg" class="d-block w-100 c-img" alt="...">
-              <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-                <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
-                <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-                <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
-              </div>      
-            </div>
-            <div class="carousel-item c-item">
-              <img src="assets/img/img3.jpg" class="d-block w-100 c-img" alt="...">
-              <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-                <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
-                <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
-                <button class="btn btn-primary" id="boton-nav">Reserva ya</button>
-              </div>      
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+    <!--Barra de Navegacion -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <i>Italianisimo</i>
+            <img class="nav-img" src="assets/img/img1.png" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-
-      <!--Seccion 2-->
-      <section class="section2">
-        <div class="container">
-          <div class="row">
-
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="activo" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eventos.html">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Busca aqui...">
+              <button class="btn btn-danger search-btn" type="button">Buscar</button>
+            </form>
           </div>
         </div>
-      </section>
+    </nav> 
 
-      <!--Seccion 3-->
-      <section class="section3">
-        <div class="container">
-          <div class="row">
-            
+    <!--Seccion 1 -- Carrusel-->
+    <section class="section" id="section1">
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>      
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="assets/img/img11.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
+              <h6 class="mt-5 fs-8 text-uppercase" ><i>Desde 1965</i></h6>
+              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
+            </div>      
+          </div>
+          <div class="carousel-item c-item">
+            <img src="assets/img/img2.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
+              <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
+              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
+            </div>      
+          </div>
+          <div class="carousel-item c-item">
+            <img src="assets/img/img3.jpg" class="d-block w-100 c-img">
+            <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
+              <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
+              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='eventos.html'">Reserva ya</button>
+            </div>      
           </div>
         </div>
-      </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
-      <!--Seccion 4-->
-      <section class="section4">
-        <div class="container">
-          <div class="row">
-            
+    <!--Seccion 2-- Contexto -->
+    <section class="about-section-padding" id="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12 my-4">
+            <div class="about-img mt-5">
+              <img src="assets/img/img7.jpg" class="img-fluid rounded">
+            </div>
           </div>
-        </div>
-      </section>
-      
-    
-    </main>
-
-    <!--Footer-->
-    <footer class="c-footer">
-      <div class="pt-3 pb-4">
-        <div class="container text-center text-md-left">
-          <div class="row text-center text-md-left">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h5 class="text-uppercase mb-4 font-weight-bold">Italianisimo</h5>
-              <p>Comida tradicional hecha desde Roma con amor.</p>
-              <img src="assets/img/img1.png" alt="">
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="section2Texto">
+            <div class="about-text mt-4">
+              <h2>Seguimos nuestra tradicion Italiana</h2>
+              <br>
+              <h4>Con el mejor servicio</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus debitis magni cumque deleniti adipisci eveniet, deserunt nulla omnis reprehenderit commodi animi maiores nostrum nisi sed voluptatem! Explicabo distinctio consequuntur, nostrum omnis officia mollitia quas eos odit modi ipsum nam quo voluptatibus iste at, provident ullam minima sed. Libero, esse veritatis!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore ducimus culpa temporibus cupiditate, nesciunt quaerat in velit autem, adipisci libero, mollitia cum eligendi iusto doloribus qui ab perspiciatis placeat!</p>
+              <br>
+              <button class="btn btn-primary" id="btn_section2" onclick="window.location.href='nosotros.html'">Conoce más</button>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
-              <p><a href="#" class="f-text">Pizza</a></p>
-              <p><a href="#" class="f-text">Lasagna</a></p>
-              <p><a href="#" class="f-text">Pasta</a></p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
-              <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
-              <p><a href="#" class="f-text">Noche romana</a></p>
-              <p><a href="#" class="f-text">Tarde Napolitana</a></p>
-              <p><a href="#" class="f-text">Dia en Milan</a></p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
-              <p><i class="fas fa-home mr-"></i>Santiago Centro, RM 1456, CL</p>
-              <p><i class="fas fa-home mr-3"></i>Italianisimo@gmail.com</p>
-              <p><i class="fas fa-home mr-3"></i>+56 1234 56 7890</p>
-              <p><i class="fas fa-home mr-3"></i>+222 3034 454</p>
-            </div>
-
-            <hr class="mb-4">
-
-            <div class="row align-items-center">
-              <div>
-                <p>&copy;Copyright 2023 Todos los derechos reservados</p>
-              </div>
-            </div>
-            
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <!--Seccion 3-- Platos con cards -->
+    <section class="services section-padding" id="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="containerTop">
+            <div class="section-header text-center pb-5">
+              <h2>Nuestras especialidades</h2>
+              <h6>Tenemos nuestra propia tradicion para hacer las cosas</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-white text-center pb-2" id="cardBody3">
+              <div class="card-body">
+                <i class="bi bi-subtract"></i>
+                <h3 class="card-title" id="cardTitle">Pizza</h3>
+                <p class="lead" id="cardTitle">Las mejores tecnicas con nuestras pizzas al horno</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-white text-center pb-2" id="cardBody3">
+              <div class="card-body">
+                <i class="bi bi-nut"></i>
+                <h3 class="card-title" id="cardTitle">Pasta</h3>
+                <p class="lead" id="cardTitle">Hacemos nuestra propia pasta con la receta de la nonna</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-4" id="containerBottom">
+            <div class="card text-white text-center pb-2" id="cardBody3">
+              <div class="card-body">
+                <i class="bi bi-heart"></i>
+                <h3 class="card-title" id="cardTitle">Lasagna</h3>
+                <p class="lead" id="cardTitle">Con los mejores ingredientes. Hechos en una granja autosustentable.</p>
+                <button class="btn btn-primary" id="botonS3"  onclick="window.location.href='productos.html'">Conoce más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Seccion 4-- Contexto -->
+    <section class="about-section-padding" id="section">
+      <div class="container">
+        <div class="row" id="section4Top">
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="section4_">
+            <div class="about-text mt-5">
+              <h2>Conoce nuestros eventos culturales</h2>
+
+              <br>
+              <h4>Con el mejor animo</h4>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet quae beatae similique, explicabo accusamus excepturi unde illo atque non at facere voluptatum placeat esse eligendi. Adipisci natus distinctio numquam exercitationem. At quia illum id accusantium debitis quisquam, voluptatum aut? Aliquam impedit, ratione quod earum dignissimos laboriosam ut tempore qui.</p>
+              <br>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus incidunt reprehenderit exercitationem amet iusto in hic tempora facere. Rem excepturi quisquam itaque pariatur voluptas harum quis consequuntur doloribus eligendi laboriosam.</p>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatem ex ipsam maiores voluptatibus, provident possimus? Possimus expedita illo voluptates laudantium ipsum similique maiores sequi doloribus aliquam repellat porro repellendus ipsam, libero esse amet, quod natus maxime necessitatibus at voluptate.</p>
+              <button class="btn btn-primary mt-4" id="btn_section4" onclick="window.location.href='eventos.html'">Conoce más</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img my-5">
+              <img src="assets/img/img8.jpg" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <!--Footer-->
+  <footer class="c-footer">
+    <div class="pt-3 pb-4">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Italianisimo</h5>
+            <p>Comida tradicional hecha desde Roma con amor.</p>
+            <img src="assets/img/img1.png" alt="">
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
+            <p><a href="productos.html" class="f-text">Pizza</a></p>
+            <p><a href="productos.html" class="f-text">Lasagna</a></p>
+            <p><a href="productos.html" class="f-text">Pasta</a></p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
+            <p><a href="eventos.html" class="f-text">Noche romana</a></p>
+            <p><a href="eventos.html" class="f-text">Tarde Napolitana</a></p>
+            <p><a href="eventos.html" class="f-text">Dia en Milan</a></p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+            <p><i class="fas fa-home mr-"></i>Santiago Centro, RM 1456, CL</p>
+            <p><i class="fas fa-home mr-3"></i>Italianisimo@gmail.com</p>
+            <p><i class="fas fa-home mr-3"></i>+56 1234 56 7890</p>
+            <p><i class="fas fa-home mr-3"></i>+222 3034 454</p>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="row align-items-center">
+            <div>
+              <p>&copy;Copyright 2023 Todos los derechos reservados</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
 
   
 
@@ -188,7 +264,6 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
