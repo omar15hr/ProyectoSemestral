@@ -67,64 +67,64 @@
         <h3>Formulario de Contacto</h3>
         <div class="row">
           
-          <form class="align-items-center">
-            <!--nombre-->
+          <form class="align-items-center" name="formContacto">
+            
             <div class="mb-3">
               <label for="nombreFormulario">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos.">
+              <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos." required>
             </div>
 
-            <!--apellidos-->
+            
             <div class="row mb-3">
               <div class="col-6">
                 <label for="primerApellido">Apellido paterno:</label>
-                <input type="text" class="form-control" id="pApellido" name="primerApellido" placeholder="Ingrese su apellido paterno.">
+                <input type="text" class="form-control" id="pApellido" name="primerApellido" placeholder="Ingrese su apellido paterno." required>
               </div>
               <div class="col-6">
-                <label for="segundoApellido">Apellido paterno:</label>
-                <input type="text" class="form-control" id="sApellido" name="primerApellido" placeholder="Ingrese su apellido materno.">
+                <label for="segundoApellido">Apellido materno:</label>
+                <input type="text" class="form-control" id="sApellido" name="primerApellido" placeholder="Ingrese su apellido materno." required>
               </div>
             </div>
 
 
-            <!--el formato de teléfono debe ajustarse a los números chilenos, verificar para móvil y fijo-->
+            
             <div class="mb-3">
               <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
-              <input type="tel" class="form-control" id="telefonoFormulario" placeholder="Formato: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+              <input type="tel" class="form-control" id="telefonoFormulario" pattern="[0-9]{9}" placeholder="Debe ingresar nueve dígitos." required>
             </div>
 
-            <!--email-->
+            
             <div class="mb-3 col-6">
               <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
-              <input type="email" class="form-control mb-3" id="emailFormulario" aria-describedby="emailAyuda">
+              <input type="email" class="form-control mb-3" id="emailFormulario" aria-describedby="emailAyuda" required>
             </div>
 
             
 
-            <!--rut-->
+            
             <div class="row mb-3">
               <div class="col-10">
                 <label for="numrut" class="form-label">Número de rut</label>
-                <input type="text" class="form-control" id="numrut" placeholder="Ingrese su número de rut, sin puntos" aria-label="Número de Rut">
+                <input type="text" class="form-control" id="numrut" placeholder="Ingrese su número de rut, sin puntos" aria-label="Número de Rut" required>
               </div>
 
               <div class="col-2">
                 <label for="dvrut" class="form-label">Dígito verificador</label>
-                <input type="text" class="form-control" id="dvrut" aria-label="Dígito verificador">
+                <input type="text" class="form-control" id="dvrut" aria-label="Dígito verificador" placeholder="0-9 o K (mayúscula)" required>
               </div>
             </div>
 
             
 
-            <!--comentarios opcionales-->
+            
             <div class="mb-3">
-              <label for="comentarioFormulario">Comentarios (opcional):</label>
-              <input type="text" class="form-control" id="nombre" name="comentarioFormulario">
+              <label for="comentarioFormulario">Comentarios:</label>
+              <input type="text" class="form-control" id="comentarioFormulario" name="comentarioFormulario" required>
             </div>
 
-            <!--botones para enviar y para borrar la información ingresada. EL ENVIAR SE HACE CON UN POST PARA QUE LA INFO NO APAREZCA EN LA URL-->
+            
             <div>
-              <button type="submit" class="btn btn-primary mb-3" id="btn_section13">Enviar Información</button>
+              <button type="submit" class="btn btn-primary mb-3" id="btn_section13" onclick="validarFormulario()">Enviar Información</button>
               <button type="reset" class="btn btn-primary mb-3" id="btn_section13">Borrar información</button>
             </div>
 
@@ -132,7 +132,6 @@
         </div>
       </div>
     </section>
-
     <!--Seccion 15-->
 
 
@@ -200,6 +199,6 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/js/validation.js"></script>
 </body>
 </html>
