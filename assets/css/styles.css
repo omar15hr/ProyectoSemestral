@@ -1,7 +1,7 @@
 /*
-========================
-Variables de los colores
-========================
+=========================================
+        Variables de los colores
+=========================================
 */
 :root{
     --verde-oscuro: #386641;
@@ -11,11 +11,10 @@ Variables de los colores
     --rojo-pastel: #bc4749;
 }
 /*
-========================
-Barra de navegacion
-========================
+=========================================
+           Barra de navegacion
+=========================================
 */
-
 .navbar{
     background-color: #386641;
 }
@@ -39,7 +38,7 @@ Barra de navegacion
     color: var(--beige-pastel);
 }
 
-#activo{
+#paginaActiva{
     color: #ff0000;
 }
 
@@ -48,9 +47,26 @@ Barra de navegacion
 }
 
 /*
-========================
-Seccion 1 Carrusel
-========================
+=========================================
+          TODAS LAS SECCIONES
+=========================================
+*/
+#section{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+    display: flex;
+}
+/*
+
+/*
+=========================================
+          PAGINA INDEX/INICIO
+=========================================
+*/
+/*
+==================
+SECCION 1 CARRUSEL
+==================
 */
 .c-item{
     height: 480px;
@@ -70,58 +86,43 @@ Seccion 1 Carrusel
     margin-top: 5rem;
 }
 /*
-=====================================
-        TODAS LAS SECCIONES
-=====================================
+==================
+SECCION 2 CONTEXTO
+==================
 */
-#section{
-    background-color: var(--beige-pastel);
-    color: var(--verde-oscuro);
-    display: flex;
-}
-/*
-=====================================
-         PAGINA INDEX/HOME
-=====================================
-*/
-/*
-===========================
-Seccion 2 Contexto del main
-===========================
-*/
-#btn_section2{
+#btnContextoSeccion2{
     background-color: #386641;
     color: var(--beige-pastel);
     border: none;
 }
 
-#btn_section2:hover{
+#btnContextoSeccion2:hover{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
     border: none;
 }
 
-#section2Texto{
+#textoSeccion2{
     margin-top: 5rem;
     margin-bottom: 2rem;
     text-align: justify;
 }
 /* 
-==============================
-Seccion EXTRA RELOJ
-==============================
+===============
+SECCION 3 RELOJ
+===============
 */
-#boton-hora{
+#btnReloj{
     background-color: #bc4749;
     border: none;
 }
 
-#boton-hora:hover{
+#btnReloj:hover{
     font-size: 110%;
     background-color: #386641;
 }
 
-#texto-hora{
+#textoHora{
     margin-top: 10rem;
     margin-left: 10rem;
 }
@@ -176,7 +177,6 @@ Seccion EXTRA RELOJ
 .hr, .mn, .sc{
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
     position: absolute;
     border-radius: 50%;
 }
@@ -211,9 +211,9 @@ Seccion EXTRA RELOJ
     border-radius: 6px 6px 0 0;
 }
 /* 
-==============================
-Seccion 3 Cards de los platos
-==============================
+======================
+SECCION 4 PLATOS CARDS
+======================
 */
 #cartas{
     margin-top: 4rem;
@@ -234,57 +234,60 @@ Seccion 3 Cards de los platos
     color: var(--beige-pastel);
 }
 
-#botonS3{
+#botonPlatos{
     background-color: var(--verde-medio);
     border: none;
     color: var(--beige-pastel);
 }
 
-#botonS3:hover{
+#botonPlatos:hover{
     background-color: var(--beige-pastel);
     color: var(--verde-oscuro);
 }
-
 /*
-========================
-Seccion 4 Contexto eventos
-========================
+==========================
+SECCION 5 CONTEXTO EVENTOS
+==========================
 */
-#btn_section4{
+#btnEventoSeccion4{
     background-color: #386641;
     color: var(--beige-pastel);
     border: none;
 }
 
-#btn_section4:hover{
+#btnEventoSeccion4:hover{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
     border: none;
 }
 
-#texto3{
+#textoEventosSeccion3{
     text-align: justify;
 }
 /*
-=====================================
-        PAGINA PRODUCTOS
-=====================================
+=========================================
+            PAGINA PRODUCTOS
+=========================================
 */
 /*
-========================
-Seccion 5 Cards
-========================
+=========================
+SECCION 6 CARDS PRODUCTOS
+=========================
 */
 #cartasProductos{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
 }
+
+#textoCardProducto{
+    text-align: justify;
+}
 /*
-========================
-Seccion 6 Texto
-========================
+============================
+SECCION 7 CONTEXTO PRODUCTOS
+============================
 */
-#section6{
+#textoSeccion7{
     margin-top: 4rem;
     margin-bottom: 4rem;
     text-align: justify;
@@ -293,62 +296,104 @@ Seccion 6 Texto
 #imagen1Producto{
     height: 400px;
     width: 450px;
+    margin-left: 2rem;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+==============================
+SECCION 9 CONTEXTO 2 PRODUCTOS
+==============================
+*/
+#textoContexto2Producto{
+    text-align: justify;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+=======================================
+             PAGINA EVENTOS
+=======================================
+*/
+/*
+==========================
+SECCION 10 CONTEXTO EVENTO
+==========================
+*/
+#textoContextoEventos{
+    text-align: justify;
+}
+/*
+=======================
+SECCION 11 CARDS EVENTO
+=======================
+*/
+#cardtextEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    text-align: justify;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+============================
+SECCION 13 CONTEXTO 2 EVENTO
+============================
+*/
+#textoContexto2Eventos{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+#btnContextoEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btnContextoEventos:hover{
+    background-color: var(--rojo-pastel);
 }
 /*
 =====================================
-        PAGINA Nosotros
+           PAGINA NOSOTROS
 =====================================
 */
 /*
-========================
-Seccion 12 Texto
-========================
+============================
+SECCION 16 CONTEXTO NOSOTROS
+============================
 */
-#section12{
+#textoSeccion16{
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
 #imagen1Nosotros{
     height: 400px;
-    width: 450px;
-}
-/*
-=====================================
-           PAGINA EVENTOS
-=====================================
-*/
-/*
-========================
-Seccion 9 Eventos
-========================
-*/
-#imagenesEvento{
-    height: 200px
-}
-#cardtextEventos{
-    background-color: var(--verde-oscuro);
-    color: var(--beige-pastel);
+    width: 550px;
 }
 
+#textoNosotros{
+    text-align: justify;
+}
+/*
 /*
 =====================================
-           PAGINA Contacto
+           PAGINA CONTACTO
 =====================================
 */
+/*El estilo del reloj es el mismo de la pagina inicio*/
 /*
-========================
-Seccion 13 Formulario de Contacto
-========================
+=====================
+SECCION 18 FORMULARIO
+=====================
 */
 
-#btn_section13{
+#btnFormulario{
     background-color: #386641;
     color: var(--beige-pastel);
     border: none;
 }
 
-#btn_section13:hover{
+#btnFormulario:hover{
     background-color: var(--rojo-pastel);
     color: var(--beige-pastel);
     border: none;
@@ -357,7 +402,7 @@ Seccion 13 Formulario de Contacto
 /*
 
 ========================
-Footer
+        FOOTER 
 ========================
 */
 .footer-img{
@@ -410,13 +455,21 @@ footer a{
     color: #bc4749;
 }
 
-/*ESTILO DEL MAPA*/
+/*
+===============
+ESTILO DEL MAPA
+===============
+*/
 #myMap{
     height: 300px;
     width: 700px;
 }
 
-/*ESTILO DE LA TARJETA DEL CLIMA*/
+/*
+==============================
+ESTILO DE LA TARJETA DEL CLIMA
+==============================
+*/
 
 .weather-icon{
     width: 110px;
