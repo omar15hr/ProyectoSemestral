@@ -10,7 +10,8 @@
     <title>Inicio | Comida Italiana</title>
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/modoClaro.css">
+    <link rel="stylesheet" href="assets/css/modoOscuro.css">
     <!--LINK DE ESTILOS DEL MAPA-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!--LINK DE FONT-AWESOME-->
@@ -18,15 +19,16 @@
     <!--LINKS DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-</head> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  </head> 
 
-<body> 
+<body class=""> 
 
   <!--Main-->
   <main>
 
     <!--Barra de Navegacion -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <i>Italianisimo</i>
@@ -41,28 +43,28 @@
                 <a class="nav-link" id="paginaActiva" href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="productos.html">Productos</a>
+                <a class="nav-link" href="productos.html" id="textoBarra">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="eventos.html">Eventos</a>
+                <a class="nav-link" href="eventos.html" id="textoBarra">Eventos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
+                <a class="nav-link" href="nosotros.html" id="textoBarra">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link" href="contacto.html" id="textoBarra">Contacto</a>
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Busca aqui...">
+              <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
               <button class="btn btn-danger search-btn" type="button">Buscar</button>
             </form>
           </div>
         </div>
-    </nav> 
+    </nav>
 
     <!--Seccion 1 -- Carrusel -->
-    <section class="section" id="section1">
+    <section id="section1">
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -70,27 +72,27 @@
           <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>      
         <div class="carousel-inner">
-          <div class="carousel-item active c-item">
+          <div class="carousel-item active">
             <img src="assets/img/img11.jpg" class="d-block w-100 c-img">
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
-              <h6 class="mt-5 fs-8 text-uppercase" ><i>Desde 1965</i></h6>
-              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <h6 class="mt-5 fs-8 fs-sm-10 text-uppercase" ><i>Desde 1965</i></h6>
+              <h3 class="fs-20 fs-md-30"><i>Ven y prueba la verdadera comida italiana</i></h3>
               <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
             </div>      
           </div>
-          <div class="carousel-item c-item">
+          <div class="carousel-item">
             <img src="assets/img/img2.jpg" class="d-block w-100 c-img">
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
-              <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
-              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <h6 class="mt-5 fs-8 fs-sm-10 text-uppercase"><i>Desde 1965</i></h6>
+              <h3 class="fs-20 fs-md-30"><i>Ven y prueba la verdadera comida italiana</i></h3>
               <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='contacto.html'">Reserva ya</button>
             </div>      
           </div>
-          <div class="carousel-item c-item">
+          <div class="carousel-item">
             <img src="assets/img/img3.jpg" class="d-block w-100 c-img">
             <div class="carousel-caption top-0 d-none d-md-block" id="textoCarrusel">
-              <h6 class="mt-5 fs-8 text-uppercase"><i>Desde 1965</i></h6>
-              <h3><i>Ven y prueba la verdadera comida italiana</i></h3>
+              <h6 class="mt-5 fs-8 fs-sm-10 text-uppercase"><i>Desde 1965</i></h6>
+              <h3 class="fs-20 fs-md-30"><i>Ven y prueba la verdadera comida italiana</i></h3>
               <button class="btn btn-primary mt-3" id="boton-nav" onclick="window.location.href='eventos.html'">Reserva ya</button>
             </div>      
           </div>
@@ -107,7 +109,7 @@
     </section>
 
     <!--Seccion 2 -- Contexto -->
-    <section class="about-section-padding" id="section">
+    <section id="section">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-12 col-12 my-4">
@@ -117,7 +119,17 @@
           </div>
           <div class="col-lg-8 col-md-12 col-12 ps-lg-5" id="textoSeccion2">
             <div class="about-text mt-4">
-              <h2>Seguimos nuestra tradicion Italiana</h2>
+              <div class="col">
+                <div class="col-8">
+                  <h2>Seguimos nuestra tradicion Italiana</h2>
+                </div>
+                <div class="col-4">
+                  <div class="modo" id="modo">
+                    <h6 id=tituloAspecto>Aspecto</h6>
+                    <i class="fas fa-toggle-on"></i>
+                  </div>
+                </div>
+              </div>
               <br>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus debitis magni cumque deleniti adipisci eveniet, deserunt nulla omnis reprehenderit commodi animi maiores nostrum nisi sed voluptatem! Explicabo distinctio consequuntur, nostrum omnis officia mollitia quas eos odit modi ipsum nam quo voluptatibus iste at, provident ullam minima sed. Libero, esse veritatis!</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore ducimus culpa temporibus cupiditate, nesciunt quaerat in velit autem, adipisci libero, mollitia cum eligendi iusto doloribus qui ab perspiciatis placeat!</p>
@@ -130,22 +142,21 @@
     </section>
 
     <!--Section 3 -- Reloj -->
-    <section class="reloj" id="section">
-      <div class="clock">
-        <div class="hour">
-          <div class="hr" id="hr"></div>
+    <section id="section" class="d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-6 mt-5">
+          <div class="reloj">
+            <p class="fecha"></p>
+            <p class="tiempo"></p>
+          </div>
         </div>
-        <div class="min">
-          <div class="mn" id="mn"></div>
-        </div>
-        <div class="sec">
-          <div class="sc" id="sc"></div>
-        </div>
-      </div>
-      <div class="text-center" id="textoHora">
-        <h3>¡Ve la hora!</h3>
-        <h5>¿Aun no reservas una mesa?</h5>
-        <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+          <div class="col-6 mt-5">
+            <div id="textoHora">
+              <h3 class="textoModoOscuro">¡Ve la hora!</h3>
+              <h5>¿Aun no reservas una mesa?</h5>
+              <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -161,7 +172,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 mt-4 mb-4">
             <div class="card text-white text-center pb-2" id="cardBody3">
               <div class="card-body">
                 <i class="bi bi-subtract"></i>
@@ -172,7 +183,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-12 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 mt-4 mb-4">
             <div class="card text-white text-center pb-2" id="cardBody3">
               <div class="card-body">
                 <i class="bi bi-nut"></i>
@@ -183,7 +194,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-12 col-lg-4" id="containerBottom">
+          <div class="col-12 col-md-6 col-lg-4 mt-4 mb-4" id="containerBottom">
             <div class="card text-white text-center pb-2" id="cardBody3">
               <div class="card-body">
                 <i class="bi bi-heart"></i>
@@ -281,7 +292,7 @@
                       </div>
                     </div>
                     <div class="col">
-                      <img src="assets/img/wind.png">
+                      <img src="assets/img/wind.png" class="iconoCartaClima">
                       <div id="texto-viento">
                         <h6>Velocidad viento</h6>
                         <h6 id="viento"></h6>
@@ -312,7 +323,7 @@
 
 
 
-
+  <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
   <!--LINK DE JQUERY-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!--BOOTSTRAP-->
