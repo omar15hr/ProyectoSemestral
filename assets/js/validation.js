@@ -1,23 +1,30 @@
 //FUNCION JQUERY PARA MOSTRAR FECHA Y HORA EN TODAS LAS PAGINAS
-const deg = 6;
-const hr = $('#hr');
-const mn = $('#mn');
-const sc = $('#sc');
+const $tiempo = document.querySelector('.tiempo'), $fecha = document.querySelector('.fecha');
 
-setInterval(function() {
-  let day = new Date();
-  let hh = day.getHours() * 30;
-  let mm = day.getMinutes() * deg;
-  let ss = day.getSeconds() * deg;
+function digitalClock(){
+    let f = new Date(),
+    dia = f.getDate(),
+    mes = f.getMonth() + 1,
+    anio = f.getFullYear(),
+    diaSemana = f.getDay();
 
-  hr.css('transform', `rotateZ(${(hh)+(mm/12)}deg)`);
-  mn.css('transform', `rotateZ(${(mm)}deg)`);
-  sc.css('transform', `rotateZ(${(ss)}deg)`);
+    dia = ('0' + dia).slice(-2);
+    mes = ('0' + mes).slice(-2)
+
+    let timeString = f.toLocaleTimeString();
+    $tiempo.innerHTML = timeString;
+
+    let semana = ['DOM','LUN','MAR','MIE','JUE','VIE','SAB'];
+    let showSemana = (semana[diaSemana]);
+    $fecha.innerHTML = `${dia}-${mes}-${anio} ${showSemana}`
+}
+setInterval(() => {
+    digitalClock()
 }, 1000);
 
 //FUNCION DEL CLIMA ACTUAL
 $(document).ready(function() {
-  var apiKey = 'de4bde4d30f29e5059da40005d30614b'; // Reemplaza TU_API_KEY con tu propia clave de API de OpenWeatherMap
+  var apiKey = 'de4bde4d30f29e5059da40005d30614b'; 
   var url = 'https://api.openweathermap.org/data/2.5/weather?q=Santiago,cl&appid=' + apiKey;
 
   $.ajax({
@@ -84,3 +91,21 @@ navigator.geolocation.getCurrentPosition(
     timeout: 5000,
     maximumAge: 0
   })
+
+//FUNCION DE MODO OSCURO
+let modo=document.getElementById("modo");
+let body=document.body;
+
+modo.addEventListener("click", function(){
+    let val=body.classList.toggle("dark")
+    localStorage.setItem("modo",val)
+})
+
+let valor=localStorage.getItem("modo")
+
+if (valor=="true") {
+    body.classList.add("dark")
+} else {
+    body.classList.remove("dark")
+}
+

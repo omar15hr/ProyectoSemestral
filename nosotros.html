@@ -10,7 +10,8 @@
     <title>Inicio | Italianisimo</title>
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/modoClaro.css">
+    <link rel="stylesheet" href="assets/css/modoOscuro.css">
     <!--LINK DE ESTILOS DEL MAPA-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!--LINK DE FONT-AWESOME-->
@@ -26,7 +27,7 @@
   <main>
 
     <!--Barra de Navegacion -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" id="barraModoOscuro">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home.html">
             <i>Italianisimo</i>
@@ -38,23 +39,23 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="index.html"  id="textoBarra">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"  href="productos.html">Productos</a>
+                <a class="nav-link"  href="productos.html"  id="textoBarra">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="eventos.html">Eventos</a>
+                <a class="nav-link" href="eventos.html"  id="textoBarra">Eventos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="paginaActiva" href="nosotros.html">Nosotros</a>
+                <a class="nav-link" id="paginaActiva" href="nosotros.html"  id="textoBarra">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link" href="contacto.html"  id="textoBarra">Contacto</a>
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Busca aqui...">
+              <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
               <button class="btn btn-danger search-btn" type="button">Buscar</button>
             </form>
           </div> 
@@ -64,7 +65,17 @@
     <!--Seccion 14 -- Cards nosotros -->
     <section class="services section-padding" id="section">
       <div class="container" id="container4">
-        <h3 class="titutloNosotros mt-5">Conocenos un poco mas...</h3><hr>
+        <div class="row">
+          <div class="col-8">
+            <h3 class="titutloNosotros mt-5" id="textoModoOscuro">Conocenos un poco mas...</h3><hr>
+          </div>
+          <div class="col-4 mt-5">
+            <div class="modo" id="modo">
+              <h6 id=tituloAspecto>Aspecto</h6>
+              <i class="fas fa-toggle-on"></i>
+            </div>
+          </div>
+        </div>
         
         <div class="row" id="cards">
 
@@ -109,22 +120,21 @@
     </section>
 
     <!--Section 15 -- Reloj -->
-    <section class="reloj" id="section">
-      <div class="clock">
-        <div class="hour">
-          <div class="hr" id="hr"></div>
+    <section id="section" class="d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-6 mt-5">
+          <div class="reloj">
+            <p class="fecha"></p>
+            <p class="tiempo"></p>
+          </div>
         </div>
-        <div class="min">
-          <div class="mn" id="mn"></div>
-        </div>
-        <div class="sec">
-          <div class="sc" id="sc"></div>
-        </div>
-      </div>
-      <div class="text-center" id="textoHora">
-        <h3>¡Ve la hora!</h3>
-        <h5>¿Aun no reservas una mesa?</h5>
-        <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+          <div class="col-6 mt-5">
+            <div id="textoHora">
+              <h3 class="textoModoOscuro">¡Ve la hora!</h3>
+              <h5>¿Aun no reservas una mesa?</h5>
+              <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+            </div>
+          </div>
       </div>
     </section>
 
