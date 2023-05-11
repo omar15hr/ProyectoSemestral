@@ -269,6 +269,7 @@ SECCION 7 CONTEXTO PRODUCTOS
     height: 400px;
     width: 450px;
     margin-left: 2rem;
+    margin-top: 2rem;
 }
 /*El estilo del reloj es el mismo de la pagina inicio*/
 /*
@@ -278,6 +279,13 @@ SECCION 9 CONTEXTO 2 PRODUCTOS
 */
 #textoContexto2Producto{
     text-align: justify;
+    margin-top: 4rem;
+}
+
+#imagen2Productos{
+    width: 500px;
+    height: 400px;
+    margin-top: 4rem;
 }
 /*El estilo del reloj es el mismo de la pagina inicio*/
 /*
@@ -292,6 +300,7 @@ SECCION 10 CONTEXTO EVENTO
 */
 #textoContextoEventos{
     text-align: justify;
+    margin-top: 2rem;
 }
 /*
 =======================
@@ -433,8 +442,8 @@ ESTILO DEL MAPA
 ===============
 */
 #myMap{
-    height: 300px;
-    width: 700px;
+    height: 250px;
+    width: 500px;
 }
 
 /*
