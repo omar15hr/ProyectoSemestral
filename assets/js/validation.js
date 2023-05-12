@@ -1,58 +1,140 @@
+document.getElementById("error_nombre_vacio").style.display="none";
+document.getElementById("error_nombre_size").style.display="none";
+document.getElementById("error_pApellido_vacio").style.display="none";
+document.getElementById("error_pApellido_size").style.display="none";
+document.getElementById("error_sApellido_vacio").style.display="none";
+document.getElementById("error_sApellido_size").style.display="none";
+document.getElementById("error_rut_vacio").style.display="none";
+document.getElementById("error_rut_reg").style.display="none";
+document.getElementById("error_tel_vacio").style.display="none";
+document.getElementById("error_tel_isnan").style.display="none";
+document.getElementById("error_tel_limit").style.display="none";
+document.getElementById("error_mail_vacio").style.display="none";
+document.getElementById("error_mail_reg").style.display="none";
+document.getElementById("error_servicio").style.display="none";
+document.getElementById("error_comentario").style.display="none";
+
 function validarFormulario(){
     let nombre = document.getElementById('nombre').value;
     let pApellido = document.getElementById('pApellido').value;
     let sApellido = document.getElementById('sApellido').value;
     let telefonoFormulario = document.getElementById('telefonoFormulario').value;
     let emailFormulario = document.getElementById('emailFormulario').value;
-    let numrut = document.getElementById('numrut').value;
-    let dvrut = document.getElementById('dvrut').value;
+    let rut = document.getElementById('numrut').value;
     let comentarioFormulario = document.getElementById('comentarioFormulario').value;
-    let dVerif = 'K';
     let emailVerif = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    let rutVerif = ^[1-9]\d*\-(\d|k|K)$;
+    
 
-    if(nombre.length==0 && nombre.length < 3) {
-        alert("Nombre en formato no válido");
-        return false;
-    }
-
-    if(pApellido.length==0 && pApellido.length < 3) {
-        alert("Apellido paterno en formato no válido");
-        return false;
-    }
-
-    if(sApellido.lenght==0 && sApellido.length < 3) {
-        alert("Apellido materno en formato no válido");
-        return false;
-    }
-
-    if(isNaN(telefonoFormulario) && telefonoFormulario.length !=9) {
-        alert("Teléfono en formato no válido");
-        return false;
-    }
-
-    if (!emailVerif.test(emailFormulario)){
-        alert("Correo con formato incorrecto")
-        return false;
+    //nombre
+    if(nombre.trim().length==0) {
+        document.getElementById("error_nombre_vacio").style.display="inline";
+        document.getElementById("error_nombre_size").style.display="none";
+        document.getElementById("nombre").classList.add("is-invalid");
+        
+    }else if (nombre.trim().length < 3){
+        document.getElementById("error_nombre_vacio").style.display="none";
+        document.getElementById("error_nombre_vacio").style.display="inline";
+        document.getElementById("nombre").classList.add("is-invalid");
     }else{
-        if (emailFormulario.length===0){
-            alert("Debe ingresar su correo electrónico")
-            return false;
-        }
+        document.getElementById("error_nombre_vacio").style.display="none";
+        document.getElementById("error_nombre_size").style.display="none";
+        document.getElementById("nombre").classList.remove("is-invalid");
+        document.getElementById("nombre").classList.add("is-valid");
     }
 
-    if(isNaN(numrut) && numrut.lenght !=7 && numrut.lenght !=8) {
-        alert("Número de rut en formato no válido");
-        return false;
+    //papellido
+    if(pApellido.trim().length==0) {
+        document.getElementById("error_pApellido_vacio").style.display="inline";
+        document.getElementById("error_pApellido_size").style.display="none";
+        document.getElementById("pApellido").classList.add("is-invalid");
+        
+    }else if (pApellido.trim().length < 3){
+        document.getElementById("error_pApellido_vacio").style.display="none";
+        document.getElementById("error_pApellido_vacio").style.display="inline";
+        document.getElementById("pApellido").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_pApellido_vacio").style.display="none";
+        document.getElementById("error_pApellido_size").style.display="none";
+        document.getElementById("pApellido").classList.remove("is-invalid");
+        document.getElementById("pApellido").classList.add("is-valid");
     }
 
-    if (isNaN(dvrut) && dvrut.lenght > 1 && dvrut != dVerif){
-        alert("Dígito verificador en formato inválido")
-        return false;
+    //sapellido
+
+    if(sApellido.trim().length==0) {
+        document.getElementById("error_sApellido_vacio").style.display="inline";
+        document.getElementById("error_sApellido_size").style.display="none";
+        document.getElementById("sApellido").classList.add("is-invalid");
+        
+    }else if (sApellido.trim().length < 3){
+        document.getElementById("error_sApellido_vacio").style.display="none";
+        document.getElementById("error_sApellido_vacio").style.display="inline";
+        document.getElementById("sApellido").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_sApellido_vacio").style.display="none";
+        document.getElementById("error_sApellido_size").style.display="none";
+        document.getElementById("sApellido").classList.remove("is-invalid");
+        document.getElementById("sApellido").classList.add("is-valid");
     }
 
+    //tel
+    if(isNaN(telefonoFormulario)) {
+        document.getElementById("error_tel_vacio").style.display="inline";
+        document.getElementById("error_tel_isnan").style.display="inline";
+        document.getElementById("error_tel_limit").style.display="none";
+        document.getElementById("telefonoFormulario").classList.add("is-invalid");
+    }else if(telefonoFormulario.length !=9){
+        document.getElementById("error_tel_vacio").style.display="none";
+        document.getElementById("error_tel_isnan").style.display="none";
+        document.getElementById("error_tel_limit").style.display="inline";
+        document.getElementById("telefonoFormulario").classList.remove("is-invalid");
+        document.getElementById("telefonoFormulario").classList.add("is-valid");
+    }else{
+        document.getElementById("error_tel_vacio").style.display="none";
+        document.getElementById("error_tel_isnan").style.display="none";
+        document.getElementById("error_tel_limit").style.display="none";
+        document.getElementById("telefonoFormulario").classList.remove("is-invalid");
+        document.getElementById("telefonoFormulario").classList.add("is-valid");
+    }
+
+    //mail
+    if (!emailVerif.test(emailFormulario)){
+        document.getElementById("error_mail_reg").style.display="inline";
+        document.getElementById("emailFormulario").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_mail_reg").style.display="none";
+        document.getElementById("emailFormulario").classList.remove("is-invalid");
+        document.getElementById("emailFormulario").classList.add("is-valid");
+    }
+
+    //rut
+    if (rut.lenght ==0){
+        document.getElementById("error_rut_vacio").style.display="inline";
+        document.getElementById("error_rut_reg").style.display="none";
+        document.getElementById("rut").classList.add("is-invalid");
+    }else if(!rutVerif.test(rut)){
+        document.getElementById("error_rut_vacio").style.display="none";
+        document.getElementById("error_rut_reg").style.display="inline";
+        document.getElementById("rut").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_rut_vacio").style.display="none";
+        document.getElementById("error_rut_reg").style.display="none";
+        document.getElementById("rut").classList.remove("is-invalid");
+        document.getElementById("rut").classList.add("is-valid");
+    }
+
+        
+    
+
+    //com
     if (comentarioFormulario.lenght==0){
-        alert("Debe ingresar un comentario en el formulario")
-        return false;
+        document.getElementById("error_comentario").style.display="inline";
+        document.getElementById("comentarioFormulario").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_comentario").style.display="none";
+        document.getElementById("comentarioFormulario").classList.remove("is-invalid");
+        document.getElementById("comentarioFormulario").classList.add("is-valid");
     }
 
 }

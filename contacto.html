@@ -69,49 +69,67 @@
           
           <form class="align-items-center" name="formContacto">
             
-            <div class="mb-3">
-              <label for="nombreFormulario">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos." required>
-            </div>
+              
+                <div class="mb-3">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" class="form-control" onblur="validarFormulario()" id="nombre" name="nombre" placeholder="Ingrese su nombre completo.">
+                  <small id="error_nombre_vacio" class="text-danger">Debe ingresar su nombre.</small>
+                  <small id="error_nombre_size" class="text-danger">El nombre no puede ser menor a tres caracteres.</small>
+                </div>
 
             
-            <div class="row mb-3">
-              <div class="col-6">
-                <label for="primerApellido">Apellido paterno:</label>
-                <input type="text" class="form-control" id="pApellido" name="primerApellido" placeholder="Ingrese su apellido paterno." required>
-              </div>
-              <div class="col-6">
-                <label for="segundoApellido">Apellido materno:</label>
-                <input type="text" class="form-control" id="sApellido" name="primerApellido" placeholder="Ingrese su apellido materno." required>
-              </div>
-            </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="pApellido">Apellido paterno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="pApellido" name="pApellido" placeholder="Ingrese su apellido paterno.">
+                    <small id="error_pApellido_vacio" class="text-danger">Debe ingresar su apellido paterno.</small>
+                    <small id="error_pApellido_size" class="text-danger">El apellido paterno no puede ser menor a tres caracteres.</small>
+                  </div>
+                  <div class="col-6">
+                    <label for="sApellido">Apellido materno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="sApellido" name="sApellido" placeholder="Ingrese su apellido materno.">
+                    <small id="error_sApellido_vacio" class="text-danger">Debe ingresar su apellido materno.</small>
+                    <small id="error_sApellido_size" class="text-danger">El apellido materno no puede ser menor a tres caracteres.</small>
+                  </div>
+                </div>
 
+                <div class="row mb-3">
+                  <div class="col-6 mb-3">
+                    <label for="rut" class="form-label">Rut:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="rut" placeholder="Ingrese su número de rut sin puntos y con guión.">
+                    <small id="error_rut_vacio" class="text-danger">Debe ingresar su número de rut.</small>
+                    <small id="error_rut_reg" class="text-danger">Formato de rut inválido.</small>
+                  </div>
+                </div>
+                
+                <div class="row mb-3">
+                  <div class="col-6 mb-3">
+                    <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
+                    <input type="tel" class="form-control" onblur="validarFormulario()" id="telefonoFormulario" placeholder="Debe ingresar nueve dígitos.">
+                    <small id="error_tel_vacio" class="text-danger">Debe ingresar su teléfono.</small>
+                    <small id="error_tel_isnan" class="text-danger">Debe ingresar un teléfono numérico.</small>
+                    <small id="error_tel_limit" class="text-danger">Sólo puede ingresar nueve dígitos.</small>
+                  </div>
 
             
-            <div class="mb-3">
-              <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
-              <input type="tel" class="form-control" id="telefonoFormulario" pattern="[0-9]{9}" placeholder="Debe ingresar nueve dígitos." required>
-            </div>
-
-            
-            <div class="mb-3 col-6">
-              <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
-              <input type="email" class="form-control mb-3" id="emailFormulario" aria-describedby="emailAyuda" required>
-            </div>
-
+                  <div class="col-6">
+                    <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control mb-3" onblur="validarFormulario()" id="emailFormulario" placeholder="Ejemplo: mail@servidor.com">
+                    <small id="error_mail_reg" class="text-danger">Formato de correo electrónico incorrecto.</small>
+                  </div>
+                </div>
+                
             
 
-            
-            <div class="row mb-3">
-              <div class="col-10">
-                <label for="numrut" class="form-label">Número de rut</label>
-                <input type="text" class="form-control" id="numrut" placeholder="Ingrese su número de rut, sin puntos" aria-label="Número de Rut" required>
-              </div>
-
-              <div class="col-2">
-                <label for="dvrut" class="form-label">Dígito verificador</label>
-                <input type="text" class="form-control" id="dvrut" aria-label="Dígito verificador" placeholder="0-9 o K (mayúscula)" required>
-              </div>
+            <div class="col-6 mb-3">
+              <label for="tipoServicio" class="form-label">Tipo de servicio:</label>
+              <select class="form-select form-select-sm" onblur="validarFormulario()" id="tipoServicio">
+                <option select disabled value="null">Seleccione el servicio que desea contratar</option>
+                <option value="1">Envío a domicilio</option>
+                <option value="2">Retiro en local</option>
+                <option value="3">Servir en local</option>
+              </select>
+              <small id="error_servicio" class="text-danger">Debe seleccionar un servicio.</small>
             </div>
 
             
@@ -119,11 +137,12 @@
             
             <div class="mb-3">
               <label for="comentarioFormulario">Comentarios:</label>
-              <input type="text" class="form-control" id="comentarioFormulario" name="comentarioFormulario" required>
+              <input type="text" class="form-control" id="comentarioFormulario" name="comentarioFormulario" placeholder="Escriba las indicaciones para el pedido en este apartado.">
+              <small id="error_comentario" class="text-danger">Debe ingresar un comentario.</small>
             </div>
 
             
-            <div>
+            <div class="mb-3">
               <button type="submit" class="btn btn-primary mb-3" id="btn_section13" onclick="validarFormulario()">Enviar Información</button>
               <button type="reset" class="btn btn-primary mb-3" id="btn_section13">Borrar información</button>
             </div>
@@ -197,8 +216,9 @@
 
 
 
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/validation.js"></script>
+  
 </body>
 </html>
