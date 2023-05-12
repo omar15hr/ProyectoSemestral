@@ -20,11 +20,12 @@ function validarFormulario(){
     let sApellido = document.getElementById('sApellido').value;
     let telefonoFormulario = document.getElementById('telefonoFormulario').value;
     let emailFormulario = document.getElementById('emailFormulario').value;
-    let rut = document.getElementById('numrut').value;
+    let rut = document.getElementById('rut').value;
     let comentarioFormulario = document.getElementById('comentarioFormulario').value;
+    let tipoServicio = document.getElementById("tipoServicio").value;
     let emailVerif = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-    let rutVerif = ^[1-9]\d*\-(\d|k|K)$;
-    
+    let rutVerif = /^[1-9]\d*\-(\d|k|K)$/;
+    let telVerif = /^\d{9}$/;
 
     //nombre
     if(nombre.trim().length==0) {
@@ -79,24 +80,15 @@ function validarFormulario(){
     }
 
     //tel
-    if(isNaN(telefonoFormulario)) {
-        document.getElementById("error_tel_vacio").style.display="inline";
-        document.getElementById("error_tel_isnan").style.display="inline";
-        document.getElementById("error_tel_limit").style.display="none";
+    if (!telVerif.test(telefonoFormulario)){
+        document.getElementById("error_tel_reg").style.display="inline";
         document.getElementById("telefonoFormulario").classList.add("is-invalid");
-    }else if(telefonoFormulario.length !=9){
-        document.getElementById("error_tel_vacio").style.display="none";
-        document.getElementById("error_tel_isnan").style.display="none";
-        document.getElementById("error_tel_limit").style.display="inline";
-        document.getElementById("telefonoFormulario").classList.remove("is-invalid");
-        document.getElementById("telefonoFormulario").classList.add("is-valid");
     }else{
-        document.getElementById("error_tel_vacio").style.display="none";
-        document.getElementById("error_tel_isnan").style.display="none";
-        document.getElementById("error_tel_limit").style.display="none";
+        document.getElementById("error_tel_reg").style.display="none";
         document.getElementById("telefonoFormulario").classList.remove("is-invalid");
         document.getElementById("telefonoFormulario").classList.add("is-valid");
     }
+        
 
     //mail
     if (!emailVerif.test(emailFormulario)){
@@ -124,11 +116,21 @@ function validarFormulario(){
         document.getElementById("rut").classList.add("is-valid");
     }
 
-        
+    //servicio
+    
+    if(tipoServicio == null){
+        document.getElementById("error_servicio").style.display="inline";
+        document.getElementById("tipoServicio").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_servicio").style.display="none";
+        document.getElementById("tipoServicio").classList.remove("is-invalid");
+        document.getElementById("tipoServicio").classList.add("is-valid");
+    }
+    
     
 
     //com
-    if (comentarioFormulario.lenght==0){
+    if (comentarioFormulario.length==0){
         document.getElementById("error_comentario").style.display="inline";
         document.getElementById("comentarioFormulario").classList.add("is-invalid");
     }else{

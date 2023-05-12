@@ -106,9 +106,8 @@
                   <div class="col-6 mb-3">
                     <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
                     <input type="tel" class="form-control" onblur="validarFormulario()" id="telefonoFormulario" placeholder="Debe ingresar nueve dígitos.">
-                    <small id="error_tel_vacio" class="text-danger">Debe ingresar su teléfono.</small>
-                    <small id="error_tel_isnan" class="text-danger">Debe ingresar un teléfono numérico.</small>
-                    <small id="error_tel_limit" class="text-danger">Sólo puede ingresar nueve dígitos.</small>
+                    <small id="error_tel_reg" class="text-danger">Formato de teléfono incorrecto.</small>
+                    
                   </div>
 
             
@@ -123,7 +122,7 @@
 
             <div class="col-6 mb-3">
               <label for="tipoServicio" class="form-label">Tipo de servicio:</label>
-              <select class="form-select form-select-sm" onblur="validarFormulario()" id="tipoServicio">
+              <select class="form-select form-select-sm" onblur="validarFormulario()" onchange="validarFormulario()" name="tipoServicio" id="tipoServicio">
                 <option select disabled value="null">Seleccione el servicio que desea contratar</option>
                 <option value="1">Envío a domicilio</option>
                 <option value="2">Retiro en local</option>
