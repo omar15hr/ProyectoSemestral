@@ -13,6 +13,11 @@ document.getElementById("error_mail_vacio").style.display="none";
 document.getElementById("error_mail_reg").style.display="none";
 document.getElementById("error_servicio").style.display="none";
 document.getElementById("error_comentario").style.display="none";
+document.getElementById("error_codPromo_reg").style.display="none";
+document.getElementById("error_metodopago_vacio").style.display="none";
+
+
+
 
 function validarFormulario(){
     let nombre = document.getElementById('nombre').value;
@@ -23,9 +28,14 @@ function validarFormulario(){
     let rut = document.getElementById('rut').value;
     let comentarioFormulario = document.getElementById('comentarioFormulario').value;
     let tipoServicio = document.getElementById("tipoServicio").value;
+    let codPromo = document.getElementById("codPromo").value;
+    let metodoPago = document.getElementsByName("metodoPago");
     let emailVerif = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
     let rutVerif = /^[1-9]\d*\-(\d|k|K)$/;
     let telVerif = /^\d{9}$/;
+    let codVerif = /\b[0-9]{3}[A-Za-z]{3}\b/;
+    let opcionPago = 0;
+    
 
     //nombre
     if(nombre.trim().length==0) {
@@ -101,7 +111,7 @@ function validarFormulario(){
     }
 
     //rut
-    if (rut.lenght ==0){
+    if (rut.length ==0){
         document.getElementById("error_rut_vacio").style.display="inline";
         document.getElementById("error_rut_reg").style.display="none";
         document.getElementById("rut").classList.add("is-invalid");
@@ -127,7 +137,33 @@ function validarFormulario(){
         document.getElementById("tipoServicio").classList.add("is-valid");
     }
     
-    
+    //cod
+
+    if(!codVerif.test(codPromo)){
+        document.getElementById("error_codPromo_reg").style.display="inline";
+        document.getElementById("codPromo").classList.add("is-invalid");
+    }else{
+        document.getElementById("error_codPromo_reg").style.display="none";
+        document.getElementById("codPromo").classList.remove("is-invalid");
+        document.getElementById("codPromo").classList.add("is-valid");
+    }
+
+    //pago
+
+    for(let i=0; i < metodoPago.length; i++){
+        if(metodoPago[i].checked){
+            opcionPago++;
+        }
+    }
+    if(opcionPago == 0){
+        document.getElementById("error_metodopago_vacio").style.display = "inline";
+        document.getElementById("metodoPago").classList.add("is-invalid");
+    }
+    else{
+        document.getElementById("error_metodopago_vacio").style.display = "none";
+        document.getElementById("metodoPago").classList.remove("is-invalid");
+        document.getElementById("metodoPago").classList.add("is-valid");
+    }
 
     //com
     if (comentarioFormulario.length==0){
@@ -140,3 +176,7 @@ function validarFormulario(){
     }
 
 }
+
+
+
+
