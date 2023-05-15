@@ -109,7 +109,70 @@ if (valor=="true") {
     body.classList.remove("dark")
 }
 
-//FUNCION DE FORMULARIO
+//FUNCION COVID
+  
+
+$.ajax({
+    url: 'https://disease.sh/v3/covid-19/all',
+    type: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      // Define los valores a mostrar en el gráfico circular
+      let casos = data.cases;
+      let muertes = data.deaths;
+      let recuperados = data.recovered;
+
+      $('#casos').html(casos);
+      $('#muertes').html(muertes);
+      $('#recuperados').html(recuperados);
+
+      let casos1 = data.cases;
+      let muertes1 = data.deaths;
+      let recuperados1 = data.recovered;
+
+      $('#casos1').html(casos1);
+      $('#muertes1').html(muertes1);
+      $('#recuperados1').html(recuperados1);
+      
+      // Crea el gráfico circular utilizando Chart.js
+     // Carga la librería de Google Charts
+     google.charts.load('current', {packages: ['corechart']});
+                
+                // Define la función que se llamará cuando la librería esté lista
+                google.charts.setOnLoadCallback(dibujarGrafico);
+
+                
+                
+                // Define la función que dibuja el gráfico
+                function dibujarGrafico() {
+                  // Crea los datos del gráfico
+                  var datos = google.visualization.arrayToDataTable([
+                    ['Dato', 'Población'],
+                    ['Casos', casos],
+                    ['Muertes', muertes],
+                    ['Recuperados', recuperados],
+                  ]);
+
+                  // Define las opciones del gráfico
+                  var opciones = {
+                    title: 'Datos mundiales COVID-19.',
+                    width: 600,
+                    height: 400
+                  };
+                
+                  // Crea el gráfico y lo dibuja en el contenedor especificado
+                  var grafico = new google.visualization.BarChart(document.getElementById('grafico'));
+                  grafico.draw(datos, opciones);
+                }
+
+      
+    },
+    error: function() {
+      alert('Error al obtener los datos de la API.');
+    }
+  });
+
+//FUNCION FORMULARIO
 document.getElementById("error_nombre_vacio").style.display="none";
 document.getElementById("error_nombre_size").style.display="none";
 document.getElementById("error_pApellido_vacio").style.display="none";
@@ -127,9 +190,6 @@ document.getElementById("error_servicio").style.display="none";
 document.getElementById("error_comentario").style.display="none";
 document.getElementById("error_codPromo_reg").style.display="none";
 document.getElementById("error_metodopago_vacio").style.display="none";
-
-
-
 
 function validarFormulario(){
     let nombre = document.getElementById('nombre').value;
@@ -288,3 +348,8 @@ function validarFormulario(){
     }
 
 }
+
+
+
+
+
