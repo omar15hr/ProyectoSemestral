@@ -124,10 +124,12 @@ $.ajax({
       $('#casos').html(casos);
       $('#muertes').html(muertes);
       $('#recuperados').html(recuperados);
+     
+      let casos1 = data.cases.toLocaleString();
+      let muertes1 = data.deaths.toLocaleString();
+      let recuperados1 = data.recovered.toLocaleString();
 
-      let casos1 = data.cases;
-      let muertes1 = data.deaths;
-      let recuperados1 = data.recovered;
+      
 
       $('#casos1').html(casos1);
       $('#muertes1').html(muertes1);
@@ -173,6 +175,9 @@ $.ajax({
 
 //FUNCION FORMULARIO
 document.getElementById("error_nombre_vacio").style.display="none";
+
+  //FORMULARIO
+  document.getElementById("error_nombre_vacio").style.display="none";
 document.getElementById("error_nombre_size").style.display="none";
 document.getElementById("error_pApellido_vacio").style.display="none";
 document.getElementById("error_pApellido_size").style.display="none";
