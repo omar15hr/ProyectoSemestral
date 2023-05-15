@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--TITULO DE LA PAGINA-->
+    <title>Inicio | Italianisimo</title>
+    <link rel="icon" href="assets/img/img1.png">
+    <!--LINK DE CSS-->
+    <link rel="stylesheet" href="assets/css/modoClaro.css">
+    <link rel="stylesheet" href="assets/css/modoOscuro.css">
+    <!--LINK DE ESTILOS DEL MAPA-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!--LINK DE FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--LINKS DE BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!--LINK DE JQUERY-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--LINK GOOGLE -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  
+</head>
+
+<body>
+
+    <!--Main-->
+    <main>
+  
+      <!--Barra de Navegacion-->
+      <nav class="navbar navbar-expand-md navbar-dark" id="barraModoOscuro">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#home.html">
+              <i>Italianisimo</i>
+              <img class="nav-img" src="assets/img/img1.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"  id="textoBarra">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="productos.html"  id="textoBarra">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="eventos.html"  id="textoBarra">Eventos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html"  id="textoBarra">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html"  id="textoBarra">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="paginaActiva" href="api.html"  id="textoBarra">COVID-19</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
+                <button class="btn btn-danger search-btn" type="button">Buscar</button>
+              </form>
+            </div>
+          </div>
+      </nav> 
+  
+     <!-- Section GRAFICO -->
+     <section class="about-section-padding" id="section">
+        <div class="container">
+          <div class="row my-5">
+            <div class="row">
+              
+                <div class="col-8">
+                    <h1>Estadísticas globales de COVID-19</h1>
+                  <hr>
+                </div>
+                <div class="col-4">
+                  <div class="modo" id="modo">
+                    <h6 id=tituloAspecto>Aspecto</h6>
+                    <i class="fas fa-toggle-on"></i>
+                  </div>
+                </div>
+            </div>
+            <div class="row"> 
+              <div class="col-md-2">
+                <img src="assets/img/covid.png" class="img-fluid rounded">
+              </div>
+              <div class="col-md-2" id="texto3">
+                    <p>Casos: <span id="casos1"></span></p>
+                    <p>Muertes: <span id="muertes1"></span></p>
+                    <p>Recuperados: <span id="recuperados1"></span></p>
+                  </div>
+                  <div class="col-md-8">
+                  <div id="grafico"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    <!--Section 17 -- Reloj -->
+    <section id="section" class="d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-6 mt-5">
+            <div class="reloj">
+              <p class="fecha"></p>
+              <p class="tiempo"></p>
+            </div>
+          </div>
+            <div class="col-6 mt-5">
+              <div id="textoHora">
+                <h3 class="textoModoOscuro">¡Ve la hora!</h3>
+                <h5>¿Aun no reservas una mesa?</h5>
+                <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+              </div>
+            </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+     
+    </main>
+  
+    <!--Footer-->
+    <footer class="c-footer">
+      <div class="pt-3 pb-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold">Italianisimo</h5>
+              <p>Comida tradicional hecha desde Roma con amor.</p>
+              <img src="assets/img/img1.png" alt="">
+            </div>
+  
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
+              <p><a href="productos.html" class="f-text">Pizza</a></p>
+              <p><a href="productos.html" class="f-text">Lasagna</a></p>
+              <p><a href="productos.html" class="f-text">Pasta</a></p>
+            </div>
+  
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
+              <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
+              <p><a href="eventos.html" class="f-text">Noche romana</a></p>
+              <p><a href="eventos.html" class="f-text">Tarde Napolitana</a></p>
+              <p><a href="eventos.html" class="f-text">Dia en Milan</a></p>
+            </div>
+  
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+              <p><i class="fa-solid fa-location-dot"></i></i> Santiago Centro, RM 1456, CL</p>
+              <p><i class="fa-solid fa-envelope"></i></i>Italianisimo@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i></i> +56 1234 56 7890</p>
+              <p><i class="fas fa-home mr-3"></i> +222 3034 454</p>
+            </div>
+  
+            <hr class="mb-4">
+  
+            <div class="row mb-4">
+              <div class="col-lg-6">
+                <div class="col-lg-12">
+                  <h3 class="text-center mt-5 mb-4" id="tituloMapa">Mapa de la ciudad</h3>
+                </div>
+                <div id="myMap"></div>
+              </div>
+  
+              <div class="col-lg-6 mt-5">
+                <div class="card" id="carta-clima">
+                  <div class="weather">
+                    <img src="assets/img/clear.png" class="weather-icon">
+                    <h2 id="temperatura"></h2>
+                    <h3 id="ciudad"></h3>
+                    <div class="details">
+                      <div class="col">
+                        <img src="assets/img/humidity.png">
+                        <div id="texto-humedad">
+                          <h6>Humedad</h6>
+                          <h6 id="humedad"></h6>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <img src="assets/img/wind.png" class="iconoCartaClima">
+                        <div id="texto-viento">
+                          <h6>Velocidad viento</h6>
+                          <h6 id="viento"></h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <hr class="mb-4">
+  
+            <div class="row align-items-center">
+              <div>
+                <p>&copy;Copyright 2023 Todos los derechos reservados</p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!--LINK API LEAFLET-->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <!--LINK DE JAVASCRIPT-->
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/covid.js"></script>
+  
+
+  </body>
+  </html>
