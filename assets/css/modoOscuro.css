@@ -1,0 +1,534 @@
+/*
+=========================================
+        Variables de los colores
+=========================================
+*/
+:root{
+    --verde-oscuro: #386641;
+    --verde-medio: #6a994e;
+    --verde-medioModoOscuro: #374f29;
+    --verde-claro: #a7c957;
+    --beige-pastel: #f2e8cf;
+    --rojo-pastel: #bc4749;
+    --rojo-modoOscuro: #8a3f40;
+    --verde-modoOscuro: #1f3423;
+    --verde-SegundoOscuro: #162318;
+}
+/*
+=========================================
+            Barra de navegacion
+=========================================
+*/
+.dark .navbar{
+    background-color: var(--verde-modoOscuro);
+}
+
+.dark #barraModoOscuro{
+    background-color: var(--verde-medioModoOscuro);
+    color: var(--beige-pastel);
+}
+
+.dark .nav-img{
+    width: 60px;
+    height: 30px;
+}
+
+.dark .navbar-nav li a:hover {
+    font-size: 120%;
+}
+
+.dark .navbar-nav a{
+    color: red;
+}
+
+.dark .btn-danger.search-btn:hover {
+    background-color: var(--verde-medio);
+    color: var(--beige-pastel);
+}
+
+.dark .btn-danger.search-btn{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #paginaActiva{
+    color: var(--rojo-pastel);
+    font-size: large;
+}
+
+.dark .navbar-brand i{
+    color: var(--beige-pastel);
+}
+
+.dark #textoBarra{
+    color: var(--beige-pastel);
+}
+
+#modo{
+    width: 10px;
+    font-size: 30px;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.dark #modo{
+    color: orange;
+}
+
+#tituloAspecto{
+    font-size: small;
+}
+/*
+====================
+ASPECTO DE LA PAGINA
+====================
+*/
+.dark #menuAspecto{
+    background-color: var(--verde-modoOscuro);
+}
+
+.dark #textoAspecto{
+    color: var(--beige-pastel);
+    cursor: pointer;
+}
+
+#textoAspecto:hover{
+    color: var(--verde-modoOscuro);
+    cursor: pointer;
+}
+
+.dark #barraBusqueda{
+    background-color: var(--verde-oscuro);
+    border: none;
+}
+
+/*
+=========================================
+          TODAS LAS SECCIONES
+=========================================
+*/
+.dark #section{
+    background-color: var(--verde-modoOscuro);
+    color: var(--beige-pastel);
+    display: flex;
+}
+/*
+
+/*
+=========================================
+          PAGINA INDEX/INICIO
+=========================================
+*/
+/*
+==================
+SECCION 1 CARRUSEL
+==================
+*/
+.dark .c-item{
+    height: 480px;
+}
+
+.dark .c-img{
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.dark .carousel-caption h6, h3{
+    color: #386641;
+}
+
+.dark #textoCarrusel{
+    margin-top: 5rem;
+}
+/*
+==================
+SECCION 2 CONTEXTO
+==================
+*/
+.dark #btnContextoSeccion2{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #btnContextoSeccion2:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #textoSeccion2{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+/* 
+===============
+SECCION 3 RELOJ
+===============
+*/
+.dark .textoModoOscuro{
+    color: var(--beige-pastel);
+}
+.dark #btnReloj{
+    background-color: #bc4749;
+    border: none;
+}
+
+.dark #btnReloj:hover{
+    font-size: 110%;
+    background-color: #386641;
+}
+
+.dark #textoHora{
+    text-align: center;
+}
+
+.dark .reloj{
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--verde-medio);
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 20px ;
+}
+.dark .tiempo{
+    letter-spacing: 0.05em;
+    font-size: 50px;
+    padding: 5px 0;
+}
+.dark .fecha{
+    letter-spacing: 0.1em;
+    font-size: 20px;
+}
+/* 
+======================
+SECCION 4 PLATOS CARDS
+======================
+*/
+.dark #cartas{
+    margin-top: 4rem;
+}
+.dark #containerTop{
+    margin-top: 1rem;
+}
+
+.dark #containerBottom{
+    margin-bottom: 2rem;
+}
+
+.dark #cardBody3{
+    background-color: var(--rojo-modoOscuro);
+}
+
+.dark #cardTitle{
+    color: var(--beige-pastel);
+}
+
+.dark #botonPlatos{
+    background-color: var(--verde-medio);
+    border: none;
+    color: var(--beige-pastel);
+}
+
+.dark #botonPlatos:hover{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+}
+/*
+==========================
+SECCION 5 CONTEXTO EVENTOS
+==========================
+*/
+.dark #btnEventoSeccion4{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #btnEventoSeccion4:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #textoEventosSeccion3{
+    text-align: justify;
+}
+/*
+=========================================
+            PAGINA PRODUCTOS
+=========================================
+*/
+/*
+=========================
+SECCION 6 CARDS PRODUCTOS
+=========================
+*/
+.dark #textoTituloProductos{
+    color: var(--beige-pastel);
+}
+.dark #cartasProductos{
+    background-color: var(--rojo-modoOscuro);
+    color: var(--beige-pastel);
+}
+
+.dark #textoCardProducto{
+    text-align: justify;
+}
+/*
+============================
+SECCION 7 CONTEXTO PRODUCTOS
+============================
+*/
+.dark #textoSeccion7{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.dark #imagen1Producto{
+    height: 400px;
+    width: 450px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+==============================
+SECCION 9 CONTEXTO 2 PRODUCTOS
+==============================
+*/
+.dark #textoContexto2Producto{
+    text-align: justify;
+    margin-top: 4rem;
+}
+
+.dark #imagen2Productos{
+    width: 500px;
+    height: 400px;
+    margin-top: 4rem;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+=======================================
+             PAGINA EVENTOS
+=======================================
+*/
+/*
+==========================
+SECCION 10 CONTEXTO EVENTO
+==========================
+*/
+.dark #textoContextoEventos{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.dark .titutloNosotros{
+    color: var(--beige-pastel);
+}
+/*
+=======================
+SECCION 11 CARDS EVENTO
+=======================
+*/
+.dark #cardtextEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    text-align: justify;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+============================
+SECCION 13 CONTEXTO 2 EVENTO
+============================
+*/
+.dark #textoContexto2Eventos{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.dark #btnContextoEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #btnContextoEventos:hover{
+    background-color: var(--rojo-pastel);
+}
+/*
+=====================================
+           PAGINA NOSOTROS
+=====================================
+*/
+/*
+============================
+SECCION 16 CONTEXTO NOSOTROS
+============================
+*/
+.dark #textoSeccion16{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.dark #imagen1Nosotros{
+    height: 400px;
+    width: 550px;
+}
+
+.dark #textoNosotros{
+    text-align: justify;
+}
+/*
+/*
+=====================================
+           PAGINA CONTACTO
+=====================================
+*/
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+=====================
+SECCION 18 FORMULARIO
+=====================
+*/
+
+.dark #btnFormulario{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.dark #btnFormulario:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+/*
+
+========================
+        FOOTER 
+========================
+*/
+.dark .footer-img{
+    width: 100px;
+    height: 50px;
+}
+
+.dark .site-footer{
+    background: var(--verde-SegundoOscuro);
+}
+
+.dark footer *{
+    color: var(--beige-pastel);
+    background-color: var(--verde-SegundoOscuro);
+}
+
+.dark footer h5,a{
+    color: var(--beige-pastel);
+}
+
+.dark footer img{
+    height: 100px;
+}
+
+.dark .text-white{
+    text-decoration: none;
+}
+
+.dark .f-text{
+    color: var(--beige-pastel);
+}
+
+.dark .f-text:hover{
+    color: #bc4749;
+    text-decoration: none;
+}
+
+.dark footer a{
+    text-decoration: none;
+}
+
+.dark #boton-nav{
+    background-color: #bc4749;
+    border: #bc4749;
+}
+
+.dark #boton-nav:hover{
+    background-color: beige;
+    border: beige;
+    color: #bc4749;
+}
+
+/*
+===============
+ESTILO DEL MAPA
+===============
+*/
+#tituloMapa{
+    color: var(--beige-pastel);
+}
+#myMap{
+    height: 250px;
+    width: 500px;
+}
+
+/*
+==============================
+ESTILO DE LA TARJETA DEL CLIMA
+==============================
+*/
+
+.weather-icon{
+    width: 110px;
+    margin-top: 10px;
+}
+
+.weather h6{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#texto-humedad{
+    margin-right: 40px;
+}
+
+#texto-viento{
+    margin-top: 14px;
+}
+
+.dark #carta-clima{
+    width: 110%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #386641, #1f3423);
+    color: #f2e8cf;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}

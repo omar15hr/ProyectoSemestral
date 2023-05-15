@@ -190,51 +190,6 @@ Seccion 6 Texto
 }
 /*
 =====================================
-        PAGINA Nosotros
-=====================================
-*/
-/*
-========================
-Seccion 11 Cards
-========================
-*/
-#cardtextr{
-    background-color: var(--rojo-pastel);
-    color: var(--beige-pastel);
-}
-
-#cardtextb{
-    background-color: var(--beige-pastel);
-    color: var(--beige-pastel);
-}
-
-#cardtextv{
-    background-color: var(--verde-medio);
-    color: var(--beige-pastel);
-}
-
-#tituloNosotros{
-    color: var(--verde-oscuro);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-/*
-========================
-Seccion 12 Texto
-========================
-*/
-#section12{
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-#imagen1Nosotros{
-    height: 400px;
-    width: 450px;
-}
-/*
-=====================================
            PAGINA EVENTOS
 =====================================
 */
@@ -250,7 +205,35 @@ Seccion 9 Eventos
     background-color: var(--verde-oscuro);
     color: var(--beige-pastel);
 }
+
 /*
+=====================================
+           PAGINA Contacto
+=====================================
+*/
+/*
+========================
+Seccion 13 Formulario de Contacto
+========================
+*/
+
+#btn_section13{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btn_section13:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+
+
+
+/*
+
 ========================
 Footer
 ========================

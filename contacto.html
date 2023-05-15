@@ -10,13 +10,15 @@
     <title>Inicio | Italianisimo</title>
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!--LINK DE BOOTSTRAP-->
+    <link rel="stylesheet" href="assets/css/modoClaro.css">
+    <link rel="stylesheet" href="assets/css/modoOscuro.css">
+    <!--LINK DE ESTILOS DEL MAPA-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!--LINK DE FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--LINKS DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--LINK DE JAVASCRIPT-->
-    <script src="assets/js/validation"></script>
-    
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
   <main>
 
     <!--Barra de Navegacion-->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" id="barraModoOscuro">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home.html">
             <i>Italianisimo</i>
@@ -37,92 +39,176 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="index.html"  id="textoBarra">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="productos.html">Productos</a>
+                <a class="nav-link" href="productos.html"  id="textoBarra">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="eventos.html">Eventos</a>
+                <a class="nav-link" href="eventos.html"  id="textoBarra">Eventos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
+                <a class="nav-link" href="nosotros.html"  id="textoBarra">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="activo" href="contacto.html">Contacto</a>
+                <a class="nav-link" id="paginaActiva" href="contacto.html"  id="textoBarra">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="api.html"  id="textoBarra">COVID-19</a>
+            </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Busca aqui...">
+              <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
               <button class="btn btn-danger search-btn" type="button">Buscar</button>
             </form>
           </div>
         </div>
     </nav> 
 
-    <!--Seccion 14 -- Formulario -->
-    <section id="section13">
-      <div class="container">
+    <!--Section 17 -- Reloj -->
+    <section id="section" class="d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-6 mt-5">
+          <div class="reloj">
+            <p class="fecha"></p>
+            <p class="tiempo"></p>
+          </div>
+        </div>
+          <div class="col-6 mt-5">
+            <div id="textoHora">
+              <h3 class="textoModoOscuro">¡Ve la hora!</h3>
+              <h5>¿Aun no reservas una mesa?</h5>
+              <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!--Seccion 18 -- Formulario -->
+    <section id="section">
+      
+      <div class="container mb-3 mt-5" id="section13">
         <div class="row">
-          <form>
-            <div class="mb-3">
-              <label for="nombreFormulario">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombreFormulario">
+          <div class="col-8">
+            <h3 class="textoModoOscuro">Formulario de Contacto</h3>
+          </div>
+          <div class="col-4">
+            <div class="modo" id="modo">
+              <h6 id=tituloAspecto>Aspecto</h6>
+              <i class="fas fa-toggle-on"></i>
             </div>
-
-            <!--el formato de teléfono debe ajustarse a los números chilenos, verificar para móvil y fijo-->
-            <div class="mb-3">
-              <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
-              <input type="tel" class="form-control" id="telefonoFormulario" placeholder="Formato: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
-              <input type="email" class="form-control" id="emailFormulario" aria-describedby="emailAyuda">
-              <div id="emailAyuda" class="form-text">Su correo electrónico no será compartido con ninguna persona o entidad externa.</div>
-            </div>
+          </div>
+        </div>
+        <div class="row">
+          
+          <form class="align-items-center" name="formContacto">
             
-            <!--el rut hasta el momento se ingresaría como una cadena de texto simple, ver si queremos que sea separado por numrun y dígito verificador-->
-            <div class="mb-3">
-              <label for="rutFormulario" class="form-label">RUT:</label>
-              <input type="text" class="form-control" id="rut" name="rutFormulario">
-            </div>
+              
+                
 
-            <!--indicar si el cliente quiere delivery o reservar para consumir o retirar en el local-->
             
-            <label for="rutFormulario" class="form-label">Tipo de servicio:</label>
-            <div class="form-check">
-              
-              <input class="form-check-input" type="radio" name="servicioFormulario" id="servicioRFormulario">
-              <label class="form-check-label" for="servicioRFormulario">Reserva</label>
-            </div>
-            <div class="form-check">
-              
-              <input class="form-check-input" type="radio" name="servicioFormulario" id="servicioDFormulario">
-              <label class="form-check-label" for="servicioDFormulario">Delivery</label>
-            </div>
+                <div class="row mb-3">
+                  <h5>Datos personales</h5>
+                  <div class="col-4 mb-3">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="nombre" name="nombre" placeholder="Ingrese su nombre completo.">
+                    <small id="error_nombre_vacio" class="text-danger">Debe ingresar su nombre.</small>
+                    <small id="error_nombre_size" class="text-danger">El nombre no puede ser menor a tres caracteres.</small>
+                  </div>
 
-            <div class="mb-3">
-              <label for="comentarioFormulario">Comentarios (opcional):</label>
-              <input type="text" class="form-control" id="nombre" name="comentarioFormulario">
-            </div>
+                  <div class="col-4">
+                    <label for="pApellido">Apellido paterno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="pApellido" name="pApellido" placeholder="Ingrese su apellido paterno.">
+                    <small id="error_pApellido_vacio" class="text-danger">Debe ingresar su apellido paterno.</small>
+                    <small id="error_pApellido_size" class="text-danger">El apellido paterno no puede ser menor a tres caracteres.</small>
+                  </div>
+                  <div class="col-4">
+                    <label for="sApellido">Apellido materno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="sApellido" name="sApellido" placeholder="Ingrese su apellido materno.">
+                    <small id="error_sApellido_vacio" class="text-danger">Debe ingresar su apellido materno.</small>
+                    <small id="error_sApellido_size" class="text-danger">El apellido materno no puede ser menor a tres caracteres.</small>
+                  </div>
+                </div>
 
+
+                <div class="row mb-3">
+                    <div class="col-4 mb-3">
+                      <label for="rut" class="form-label">Rut:</label>
+                      <input type="text" class="form-control" onblur="validarFormulario()" id="rut" placeholder="Ingrese su número de rut sin puntos y con guión.">
+                      <small id="error_rut_vacio" class="text-danger">Debe ingresar su número de rut.</small>
+                      <small id="error_rut_reg" class="text-danger">Formato de rut inválido.</small>
+                    </div>
+
+                    <div class="col-4 mb-3">
+                      <label for="telefonoFormulario" class="form-label">Teléfono: +56...</label>
+                      <input type="tel" class="form-control" onblur="validarFormulario()" id="telefonoFormulario" placeholder="Debe ingresar nueve dígitos.">
+                      <small id="error_tel_reg" class="text-danger">Formato de teléfono incorrecto.</small>
+                    </div>
+
+                    <div class="col-4 mb-3">
+                      <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
+                      <input type="email" class="form-control" onblur="validarFormulario()" id="emailFormulario" placeholder="Ejemplo: mail@servidor.com">
+                      <small id="error_mail_reg" class="text-danger">Formato de correo electrónico incorrecto.</small>
+                    </div>
+                </div>
+                
+            
+                <div class="row mb-3">
+                  <h5>Datos del pedido</h5>
+                    <div class="col-4 mb-3">
+                      <label for="tipoServicio" class="form-label">Tipo de servicio:</label>
+                      <select class="form-select form-select-sm" onblur="validarFormulario()" onchange="validarFormulario()" name="tipoServicio" id="tipoServicio">
+                        <option select disabled value="null">Seleccione el servicio que desea contratar</option>
+                        <option value="1">Envío a domicilio</option>
+                        <option value="2">Retiro en local</option>
+                        <option value="3">Servir en local</option>
+                      </select>
+                      <small id="error_servicio" class="text-danger">Debe seleccionar un servicio.</small>
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="personaRetiro" class="form-label">Código de promoción:</label>
+                      <input type="text" class="form-control" onblur="validarFormulario()" name="codPromo" id="codPromo" placeholder="Opcional. Formato 3 números y 3 letras (ej: 123abc).">
+                      <small id="error_codPromo_reg" class="text-danger">Formato de código inválido.</small>
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="metodoPago" class="form-label">Forma de Pago:</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoEfectivo" value="option1">
+                        <label class="form-check-label" for="pagoEfectivo">Pago en Efectivo</label>
+                      </div>
+                      <div class="form-check"> 
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoTarjeta" value="option2">
+                        <label class="form-check-label" for="pagoTarjeta">Pago con Tarjeta</label>
+                      </div> 
+                      <div class="form-check">  
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoTransferencia" value="option3">
+                        <label class="form-check-label" for="pagoTransferencia">Transferencia</label>
+                      </div>
+                      <small id="error_metodopago_vacio" class="text-danger">Debe seleccionar una forma de pago.</small>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="comentarioFormulario" class="mb-3">Comentarios:</label>
+                  <textarea class="form-control" onblur="validarFormulario()" maxlength="100" id="comentarioFormulario" name="comentarioFormulario" placeholder="Escriba las indicaciones para el pedido en este apartado."></textarea>
+                  <small id="error_comentario" class="text-danger">Debe ingresar un comentario.</small>
+                  
+                </div>
+            
+
+            
+            
+
+            <!--botones para enviar y para borrar la información ingresada. EL ENVIAR SE HACE CON UN POST PARA QUE LA INFO NO APAREZCA EN LA URL-->
             <div>
-              <input type="reset" value="Cancelar">
+              <button type="submit" class="btn btn-primary mb-3" id="btnFormulario">Enviar Información</button>
+              <button type="reset" class="btn btn-primary mb-3" id="btnFormulario">Borrar información</button>
             </div>
 
           </form>
         </div>
       </div>
     </section>
-
-    <!--Seccion 15-->
-
-
-    <!--Seccion 16-->
-    
-    
-  
   </main>
 
   <!--Footer-->
@@ -130,32 +216,69 @@
     <div class="pt-3 pb-4">
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Italianisimo</h5>
             <p>Comida tradicional hecha desde Roma con amor.</p>
             <img src="assets/img/img1.png" alt="">
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
             <p><a href="productos.html" class="f-text">Pizza</a></p>
             <p><a href="productos.html" class="f-text">Lasagna</a></p>
             <p><a href="productos.html" class="f-text">Pasta</a></p>
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
             <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
             <p><a href="eventos.html" class="f-text">Noche romana</a></p>
             <p><a href="eventos.html" class="f-text">Tarde Napolitana</a></p>
             <p><a href="eventos.html" class="f-text">Dia en Milan</a></p>
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
-            <p><i class="fas fa-home mr-"></i>Santiago Centro, RM 1456, CL</p>
-            <p><i class="fas fa-home mr-3"></i>Italianisimo@gmail.com</p>
-            <p><i class="fas fa-home mr-3"></i>+56 1234 56 7890</p>
-            <p><i class="fas fa-home mr-3"></i>+222 3034 454</p>
+            <p><i class="fa-solid fa-location-dot"></i></i> Santiago Centro, RM 1456, CL</p>
+            <p><i class="fa-solid fa-envelope"></i></i>Italianisimo@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i></i> +56 1234 56 7890</p>
+            <p><i class="fas fa-home mr-3"></i> +222 3034 454</p>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="row mb-4">
+            <div class="col-lg-6">
+              <div class="col-lg-12">
+                <h3 class="text-center mt-5 mb-4" id="tituloMapa">Mapa de la ciudad</h3>
+              </div>
+              <div id="myMap"></div>
+            </div>
+
+            <div class="col-lg-6 mt-5">
+              <div class="card" id="carta-clima">
+                <div class="weather">
+                  <img src="assets/img/clear.png" class="weather-icon">
+                  <h2 id="temperatura"></h2>
+                  <h3 id="ciudad"></h3>
+                  <div class="details">
+                    <div class="col">
+                      <img src="assets/img/humidity.png">
+                      <div id="texto-humedad">
+                        <h6>Humedad</h6>
+                        <h6 id="humedad"></h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <img src="assets/img/wind.png" class="iconoCartaClima">
+                      <div id="texto-viento">
+                        <h6>Velocidad viento</h6>
+                        <h6 id="viento"></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <hr class="mb-4">
@@ -165,7 +288,7 @@
               <p>&copy;Copyright 2023 Todos los derechos reservados</p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -175,14 +298,14 @@
 
 
 
-
-  
-    
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!--LINK DE JQUERY-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--LINK API LEAFLET-->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+  <!--LINK DE JAVASCRIPT-->
+  <script src="assets/js/validation.js"></script>
 </body>
 </html>
