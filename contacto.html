@@ -98,71 +98,131 @@
         </div>
         <div class="row">
           
-          <form class="align-items-center">
-            <!--nombre-->
-            <div class="mb-3">
-              <label for="nombreFormulario">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombreFormulario" placeholder="Ingrese su nombre completo, incluyendo apellidos.">
-            </div>
-
-            <!--apellidos-->
-            <div class="row mb-3">
-              <div class="col-6">
-                <label for="primerApellido">Apellido paterno:</label>
-                <input type="text" class="form-control" id="pApellido" name="primerApellido" placeholder="Ingrese su apellido paterno.">
-              </div>
-              <div class="col-6">
-                <label for="segundoApellido">Apellido paterno:</label>
-                <input type="text" class="form-control" id="sApellido" name="primerApellido" placeholder="Ingrese su apellido materno.">
-              </div>
-            </div>
-
-
-            <!--el formato de teléfono debe ajustarse a los números chilenos, verificar para móvil y fijo-->
-            <div class="mb-3">
-              <label for="telefonoFormulario" class="form-label">Teléfono: +56</label>
-              <input type="tel" class="form-control" id="telefonoFormulario" placeholder="Formato: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
-            </div>
-
-            <!--email-->
-            <div class="mb-3 col-6">
-              <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
-              <input type="email" class="form-control mb-3" id="emailFormulario" aria-describedby="emailAyuda">
-            </div>
+          <form class="align-items-center" name="formContacto">
+            
+              
+                
 
             
+                <div class="row mb-3">
+                  <h5>Datos personales</h5>
+                  <div class="col-4 mb-3">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="nombre" name="nombre" placeholder="Ingrese su nombre completo.">
+                    <small id="error_nombre_vacio" class="text-danger">Debe ingresar su nombre.</small>
+                    <small id="error_nombre_size" class="text-danger">El nombre no puede ser menor a tres caracteres.</small>
+                  </div>
 
-            <!--rut-->
-            <div class="row mb-3">
-              <div class="col-10">
-                <label for="numrut" class="form-label">Número de rut</label>
-                <input type="text" class="form-control" id="numrut" placeholder="Ingrese su número de rut, sin puntos" aria-label="Número de Rut">
-              </div>
+                  <div class="col-4">
+                    <label for="pApellido">Apellido paterno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="pApellido" name="pApellido" placeholder="Ingrese su apellido paterno.">
+                    <small id="error_pApellido_vacio" class="text-danger">Debe ingresar su apellido paterno.</small>
+                    <small id="error_pApellido_size" class="text-danger">El apellido paterno no puede ser menor a tres caracteres.</small>
+                  </div>
+                  <div class="col-4">
+                    <label for="sApellido">Apellido materno:</label>
+                    <input type="text" class="form-control" onblur="validarFormulario()" id="sApellido" name="sApellido" placeholder="Ingrese su apellido materno.">
+                    <small id="error_sApellido_vacio" class="text-danger">Debe ingresar su apellido materno.</small>
+                    <small id="error_sApellido_size" class="text-danger">El apellido materno no puede ser menor a tres caracteres.</small>
+                  </div>
+                </div>
 
-              <div class="col-2">
-                <label for="dvrut" class="form-label">Dígito verificador</label>
-                <input type="text" class="form-control" id="dvrut" aria-label="Dígito verificador">
-              </div>
-            </div>
 
+                <div class="row mb-3">
+                    <div class="col-4 mb-3">
+                      <label for="rut" class="form-label">Rut:</label>
+                      <input type="text" class="form-control" onblur="validarFormulario()" id="rut" placeholder="Ingrese su número de rut sin puntos y con guión.">
+                      <small id="error_rut_vacio" class="text-danger">Debe ingresar su número de rut.</small>
+                      <small id="error_rut_reg" class="text-danger">Formato de rut inválido.</small>
+                    </div>
+
+                    <div class="col-4 mb-3">
+                      <label for="telefonoFormulario" class="form-label">Teléfono: +56...</label>
+                      <input type="tel" class="form-control" onblur="validarFormulario()" id="telefonoFormulario" placeholder="Debe ingresar nueve dígitos.">
+                      <small id="error_tel_reg" class="text-danger">Formato de teléfono incorrecto.</small>
+                    </div>
+
+                    <div class="col-4 mb-3">
+                      <label for="emailFormulario" class="form-label">Correo Electrónico:</label>
+                      <input type="email" class="form-control" onblur="validarFormulario()" id="emailFormulario" placeholder="Ejemplo: mail@servidor.com">
+                      <small id="error_mail_reg" class="text-danger">Formato de correo electrónico incorrecto.</small>
+                    </div>
+                </div>
+                
+            
+                <div class="row mb-3">
+                  <h5>Datos del pedido</h5>
+                    <div class="col-4 mb-3">
+                      <label for="tipoServicio" class="form-label">Tipo de servicio:</label>
+                      <select class="form-select form-select-sm" onblur="validarFormulario()" onchange="validarFormulario()" name="tipoServicio" id="tipoServicio">
+                        <option select disabled value="null">Seleccione el servicio que desea contratar</option>
+                        <option value="1">Envío a domicilio</option>
+                        <option value="2">Retiro en local</option>
+                        <option value="3">Servir en local</option>
+                      </select>
+                      <small id="error_servicio" class="text-danger">Debe seleccionar un servicio.</small>
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="personaRetiro" class="form-label">Código de promoción:</label>
+                      <input type="text" class="form-control" onblur="validarFormulario()" name="codPromo" id="codPromo" placeholder="Opcional. Formato 3 números y 3 letras (ej: 123abc).">
+                      <small id="error_codPromo_reg" class="text-danger">Formato de código inválido.</small>
+                    </div>
+                    <div class="col-4 mb-3">
+                      <label for="metodoPago" class="form-label">Forma de Pago:</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoEfectivo" value="option1">
+                        <label class="form-check-label" for="pagoEfectivo">Pago en Efectivo</label>
+                      </div>
+                      <div class="form-check"> 
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoTarjeta" value="option2">
+                        <label class="form-check-label" for="pagoTarjeta">Pago con Tarjeta</label>
+                      </div> 
+                      <div class="form-check">  
+                        <input class="form-check-input" type="radio" onchange="validarFormulario()" name="metodoPago" id="pagoTransferencia" value="option3">
+                        <label class="form-check-label" for="pagoTransferencia">Transferencia</label>
+                      </div>
+                      <small id="error_metodopago_vacio" class="text-danger">Debe seleccionar una forma de pago.</small>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="comentarioFormulario" class="mb-3">Comentarios:</label>
+                  <textarea class="form-control" onblur="validarFormulario()" maxlength="100" id="comentarioFormulario" name="comentarioFormulario" placeholder="Escriba las indicaciones para el pedido en este apartado."></textarea>
+                  <small id="error_comentario" class="text-danger">Debe ingresar un comentario.</small>
+                  
+                </div>
             
 
-            <!--comentarios opcionales-->
-            <div class="mb-3">
-              <label for="comentarioFormulario">Comentarios (opcional):</label>
-              <input type="text" class="form-control" id="nombre" name="comentarioFormulario">
-            </div>
+            
+            
 
+<<<<<<< HEAD
+            
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary mb-3" id="btn_section13">Enviar Información</button>
+              <button type="reset" class="btn btn-primary mb-3" id="btn_section13">Borrar información</button>
+=======
             <!--botones para enviar y para borrar la información ingresada. EL ENVIAR SE HACE CON UN POST PARA QUE LA INFO NO APAREZCA EN LA URL-->
             <div>
               <button type="submit" class="btn btn-primary mb-3" id="btnFormulario">Enviar Información</button>
               <button type="reset" class="btn btn-primary mb-3" id="btnFormulario">Borrar información</button>
+>>>>>>> d2be522b16da3dd43b6b2797ec5b16956b7c8ae4
             </div>
 
           </form>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+    <!--Seccion 15-->
+
+
+    <!--Seccion 16-->
+    
+    
+  
+=======
+>>>>>>> d2be522b16da3dd43b6b2797ec5b16956b7c8ae4
   </main>
 
   <!--Footer-->
@@ -252,6 +312,18 @@
 
 
 
+<<<<<<< HEAD
+
+  
+    
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/validation.js"></script>
+  
+=======
   <!--LINK DE JQUERY-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -261,5 +333,6 @@
   crossorigin=""></script>
   <!--LINK DE JAVASCRIPT-->
   <script src="assets/js/validation.js"></script>
+>>>>>>> d2be522b16da3dd43b6b2797ec5b16956b7c8ae4
 </body>
 </html>
