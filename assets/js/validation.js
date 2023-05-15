@@ -110,7 +110,6 @@ if (valor=="true") {
 }
 
 //FUNCION COVID
-  
 
 $.ajax({
     url: 'https://disease.sh/v3/covid-19/all',
@@ -174,6 +173,8 @@ $.ajax({
     }
   });
 
+//FUNCION FORMULARIO
+document.getElementById("error_nombre_vacio").style.display="none";
 
   //FORMULARIO
   document.getElementById("error_nombre_vacio").style.display="none";
@@ -193,9 +194,6 @@ document.getElementById("error_servicio").style.display="none";
 document.getElementById("error_comentario").style.display="none";
 document.getElementById("error_codPromo_reg").style.display="none";
 document.getElementById("error_metodopago_vacio").style.display="none";
-
-
-
 
 function validarFormulario(){
     let nombre = document.getElementById('nombre').value;
