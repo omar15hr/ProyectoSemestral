@@ -110,7 +110,6 @@ if (valor=="true") {
 }
 
 //FUNCION COVID
-  
 
 $.ajax({
     url: 'https://disease.sh/v3/covid-19/all',
