@@ -10,17 +10,13 @@
     <title>Inicio | Italianisimo</title>
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
-    <link rel="stylesheet" href="assets/css/modoClaro.css">
-    <link rel="stylesheet" href="assets/css/modoOscuro.css">
-    <!--LINK DE ESTILOS DEL MAPA-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-    <!--LINK DE FONT-AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--LINKS DE BOOTSTRAP-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--LINK DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <!--LINK GOOGLE -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--LINK DE JAVASCRIPT-->
+    <script src= "assets/js/validation"></script>
+    
+
 </head>
 
 <body>
@@ -53,11 +49,8 @@
                 <a class="nav-link" href="nosotros.html"  id="textoBarra">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html"  id="textoBarra">Contacto</a>
+               <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="api.html"  id="textoBarra">COVID-19</a>
-            </li>
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
@@ -72,18 +65,8 @@
       <div class="container">
         <div class="row my-5">
           <div class="row">
-            <div class="row">
-              <div class="col-8">
-                <h1>Estamos presentes en tus celebraciones</h1>
-                <hr>
-              </div>
-              <div class="col-4">
-                <div class="modo" id="modo">
-                  <h6 id=tituloAspecto>Aspecto</h6>
-                  <i class="fas fa-toggle-on"></i>
-                </div>
-              </div>
-            </div>
+          <h1>Estamos presentes en tus celebraciones</h1>
+            <hr>
             <div class="col-md-8">
               <img src="assets/img/img12.jpg" class="img-fluid rounded">
             </div>
@@ -136,54 +119,7 @@
       </div>
     </section>
 
-    <!--Section 12 -- Reloj-->
-    <section id="section" class="d-flex justify-content-center align-items-center">
-      <div class="row">
-        <div class="col-6 mt-5">
-          <div class="reloj">
-            <p class="fecha"></p>
-            <p class="tiempo"></p>
-          </div>
-        </div>
-          <div class="col-6 mt-5">
-            <div id="textoHora">
-              <h3 class="textoModoOscuro">¡Ve la hora!</h3>
-              <h5>¿Aun no reservas una mesa?</h5>
-              <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
-            </div>
-          </div>
-      </div>
-    </section>
-
-     <!-- Section GRAFICO -->
-     <section class="about-section-padding" id="section">
-      <div class="container">
-        <div class="row my-5">
-          <div class="row">
-            
-              <div class="col-8">
-                  <h1>Estadísticas globales de COVID-19 para que organices bien tus eventos</h1>
-                <hr>
-              </div>
-               
-          </div>
-          <div class="row"> 
-            <div class="col-md-2">
-              <img src="assets/img/covid.png" class="img-fluid rounded">
-            </div>
-            <div class="col-md-2" id="texto3">
-                  <p>Casos: <span id="casos1"></span></p>
-                  <p>Muertes: <span id="muertes1"></span></p>
-                  <p>Recuperados: <span id="recuperados1"></span></p>
-                </div>
-                <div class="col-md-8">
-                <div id="grafico"></div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--Seccion 13 -- Contexto 2 eventos-->
+     <!--Seccion 10-->
     <section class="about-section-padding" id="section">
       <div class="container">
         <div class="row my-5">
@@ -282,7 +218,7 @@
               <p>&copy;Copyright 2023 Todos los derechos reservados</p>
             </div>
           </div>
-
+          
         </div>
       </div>
     </div>
