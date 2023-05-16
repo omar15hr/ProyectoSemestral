@@ -10,13 +10,15 @@
     <title>Inicio | Italianisimo</title>
     <link rel="icon" href="assets/img/img1.png">
     <!--LINK DE CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!--LINK DE BOOTSTRAP-->
+    <link rel="stylesheet" href="assets/css/modoClaro.css">
+    <link rel="stylesheet" href="assets/css/modoOscuro.css">
+    <!--LINK DE ESTILOS DEL MAPA-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!--LINK DE FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--LINKS DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--LINK DE JAVASCRIPT-->
-    <script src="assets/js/validation"></script>
-    
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
   <main>
 
     <!--Barra de Navegacion-->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" id="barraModoOscuro">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home.html">
             <i>Italianisimo</i>
@@ -37,64 +39,73 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="index.html"  id="textoBarra">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="activo" href="productos.html">Productos</a>
+                <a class="nav-link" id="paginaActiva" href="productos.html"  id="textoBarra">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="eventos.html">Eventos</a>
+                <a class="nav-link" href="eventos.html"  id="textoBarra">Eventos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
+                <a class="nav-link" href="nosotros.html"  id="textoBarra">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
+                <a class="nav-link" href="contacto.html"  id="textoBarra">Contacto</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="api.html"  id="textoBarra">COVID-19</a>
+            </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Busca aqui...">
+              <input class="form-control me-2" type="text" placeholder="Busca aqui..." id="barraBusqueda">
               <button class="btn btn-danger search-btn" type="button">Buscar</button>
             </form>
           </div>
         </div>
     </nav> 
 
-    <!--Seccion 5 -- Cards con productos-->
+    <!--Seccion 6 -- Cards con productos -->
     <section class="services section-padding" id="section">
       <div class="container" id="container4">
-        <h2 id="tituloProducto">Nuestros platos estrellas</h2>
-        <hr>
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="cardsProductos">
-
+        <div class="row">
+          <div class="col-8">
+            <h3 class="tituloProductos mt-5" id="textoTituloProductos">Nuestro platos principales</h3><hr>
+          </div>
+          <div class="col-4 mt-5">
+            <div class="modo" id="modo">
+              <h6 id=tituloAspecto>Modo Oscuro</h6>
+              <i class="fas fa-toggle-on"></i>
+            </div>
+        </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-5" id="cards">
           <div class="col">
-            <div class="card h-100" id="cardsProductos">
-              <img src="assets/img/img4.jpg" class="card-img-top">
-              <div class="card-body" id="cardtext">
-                <h5 class="card-title"><b>Pizza</b></h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text">ent is a little bit longer.</p>
-              
+            <div class="card h-100">
+              <img src="assets/img/img4.jpg" class="card-img-top h-100 w-100">
+              <div class="card-body" id="cartasProductos">
+                <h4 class="card-title text-center"><b>Pizzas</b></h4>
+                <p class="card-text mt-3" id="textoCardProducto">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
             </div>
           </div>
 
           <div class="col">
-            <div class="card h-100" id="cardsProductos">
-              <img src="assets/img/img6.jpg" class="card-img-top">
-              <div class="card-body" id="cardtext">
-                <h5 class="card-title"><b>Lasagna</b></h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <div class="card h-100">
+              <img src="assets/img/img5.jpg" class="card-img-top h-100 w-100">
+              <div class="card-body" id="cartasProductos">
+                <h4 class="card-title text-center"><b>Pastas</b></h4>
+                <p class="card-text mt-3" id="textoCardProducto">This card has supporting text below as a natural lead-in to additional content.</p>
               </div>
             </div>
           </div>
 
           <div class="col">
-            <div class="card h-100" id="cardsProductos">
-              <img src="assets/img/img5.jpg" class="card-img-top">
-              <div class="card-body" id="cardtext">
-                <h5 class="card-title"><b>Pasta</b></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque deserunt aliquam perferendis possimus voluptas debitis cum nam assumenda quae temporibus.</p>
+            <div class="card h-100">
+              <img src="assets/img/img6.jpg" class="card-img-top h-100 w-100">
+              <div class="card-body" id="cartasProductos">
+                <h4 class="card-title text-center"><b>Lasagnas</b></h4>
+                <p class="card-text mt-3" id="textoCardProducto">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
             </div>
           </div>
@@ -103,10 +114,10 @@
       </div>
     </section>
 
-    <!--Seccion 6-->
+    <!--Seccion 7 -- Contexto productos -->
     <section class="about-section-padding" id="section">
       <div class="container">
-          <div class="row" id="section6">
+          <div class="row" id="textoSeccion7">
             <h2><i>Desde 1945...</i></h2>
             <div class="col-md-6">
               <br>
@@ -123,25 +134,38 @@
       </div>
     </section>
 
-    <!--Seccion 7-->
+    <!--Seccion 8 -- Reloj -->
+    <section id="section" class="d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-6 mt-5">
+          <div class="reloj">
+            <p class="fecha"></p>
+            <p class="tiempo"></p>
+          </div>
+        </div>
+          <div class="col-6 mt-5">
+            <div id="textoHora">
+              <h3 class="textoModoOscuro">¡Ve la hora!</h3>
+              <h5>¿Aun no reservas una mesa?</h5>
+              <button class="btn btn-primary" id="btnReloj">Reserva ya</button>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!--Seccion 9 Contexto 2 productos -->
     <section class="about-section-padding" id="section">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime iure, laudantium dicta nam ullam consequatur numquam officia corporis aliquam beatae vel, ipsa error reiciendis? Corrupti porro unde nobis sapiente nam sed voluptatibus vitae recusandae, itaque nemo, dignissimos repellendus obcaecati animi. Distinctio porro corporis impedit repudiandae excepturi minima accusamus necessitatibus?
-            <br><br><br>
+          <div class="col-md-6">
+            <img src="assets/img/img10.jpg" class="img-fluid rounded" id="imagen2Productos">
           </div>
-          <div class="row">
-            <div class="col-8">
-              <img src="assets/img/img10.jpg" class=" img-fluid rounded">
-            </div>
-            <div class="col-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit natus tempora cupiditate doloribus obcaecati, ipsam vitae porro laborum labore consequatur veniam sed sit numquam provident quam est modi ratione esse!
-              <br><br>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur mollitia quae quisquam cumque ut vero eum fugit rerum optio.
-              <br><br>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo fuga ex quod perferendis earum, animi totam nulla alias quis. Sapiente officiis tenetur nostrum saepe est voluptatibus reiciendis, facilis unde cumque adipisci deserunt aut! Dicta voluptas quas nam aliquid excepturi distinctio?
-            </div>
+          <div class="col-md-6" id="textoContexto2Producto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima ratione sunt odit amet labore. Iusto maiores odio fugiat beatae ab doloribus cum reprehenderit error aperiam enim est repellat exercitationem obcaecati velit iure dignissimos itaque officia, quo nesciunt? Quia, optio.
+            <br><br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum deserunt eveniet fugit autem minima! Quibusdam dolores accusantium porro delectus at ad sapiente provident dolore optio. Consequatur quae quasi odit. Quibusdam consequatur, expedita error molestias alias sit quis temporibus, dolores accusamus, et ea quisquam blanditiis eligendi! Labore eveniet pariatur dolor repellendus.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officiis mollitia praesentium aspernatur possimus necessitatibus est reprehenderit eveniet, repellendus natus harum provident sunt accusantium voluptatum quas tempore, consequuntur, eaque odio!
           </div>
         </div>
       </div>
@@ -154,32 +178,69 @@
     <div class="pt-3 pb-4">
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Italianisimo</h5>
             <p>Comida tradicional hecha desde Roma con amor.</p>
             <img src="assets/img/img1.png" alt="">
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Productos</h5>
             <p><a href="productos.html" class="f-text">Pizza</a></p>
             <p><a href="productos.html" class="f-text">Lasagna</a></p>
             <p><a href="productos.html" class="f-text">Pasta</a></p>
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3 no-underline">
             <h5 class="text-uppercase mb-4 font-weight-bold">Eventos</h5>
             <p><a href="eventos.html" class="f-text">Noche romana</a></p>
             <p><a href="eventos.html" class="f-text">Tarde Napolitana</a></p>
             <p><a href="eventos.html" class="f-text">Dia en Milan</a></p>
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
-            <p><i class="fas fa-home mr-"></i>Santiago Centro, RM 1456, CL</p>
-            <p><i class="fas fa-home mr-3"></i>Italianisimo@gmail.com</p>
-            <p><i class="fas fa-home mr-3"></i>+56 1234 56 7890</p>
-            <p><i class="fas fa-home mr-3"></i>+222 3034 454</p>
+            <p><i class="fa-solid fa-location-dot"></i></i> Santiago Centro, RM 1456, CL</p>
+            <p><i class="fa-solid fa-envelope"></i></i>Italianisimo@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i></i> +56 1234 56 7890</p>
+            <p><i class="fas fa-home mr-3"></i> +222 3034 454</p>
+          </div>
+
+          <hr class="mb-4">
+
+          <div class="row mb-4">
+            <div class="col-lg-6">
+              <div class="col-lg-12">
+                <h3 class="text-center mt-5 mb-4" id="tituloMapa">Mapa de la ciudad</h3>
+              </div>
+              <div id="myMap"></div>
+            </div>
+
+            <div class="col-lg-6 mt-5">
+              <div class="card" id="carta-clima">
+                <div class="weather">
+                  <img src="assets/img/clear.png" class="weather-icon">
+                  <h2 id="temperatura"></h2>
+                  <h3 id="ciudad"></h3>
+                  <div class="details">
+                    <div class="col">
+                      <img src="assets/img/humidity.png">
+                      <div id="texto-humedad">
+                        <h6>Humedad</h6>
+                        <h6 id="humedad"></h6>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <img src="assets/img/wind.png" class="iconoCartaClima">
+                      <div id="texto-viento">
+                        <h6>Velocidad viento</h6>
+                        <h6 id="viento"></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <hr class="mb-4">
@@ -189,7 +250,7 @@
               <p>&copy;Copyright 2023 Todos los derechos reservados</p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -206,7 +267,14 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!--LINK DE JQUERY-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--LINK API LEAFLET-->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+  <!--LINK DE JAVASCRIPT-->
+  <script src="assets/js/validation.js"></script>
 </body>
 </html>

@@ -1,0 +1,504 @@
+/*
+=========================================
+        Variables de los colores
+=========================================
+*/
+:root{
+    --verde-oscuro: #386641;
+    --verde-medio: #6a994e;
+    --verde-claro: #a7c957;
+    --beige-pastel: #f2e8cf;
+    --rojo-pastel: #bc4749;
+}
+/*
+=========================================
+           Barra de navegacion
+=========================================
+*/
+.navbar{
+    background-color: var(--verde-oscuro);
+}
+
+.nav-img{
+    width: 60px;
+    height: 30px;
+}
+
+.navbar-nav li a:hover {
+    color: var(--beige-pastel);
+    font-size: 120%;
+}
+
+.navbar-nav a{
+    color: red;
+}
+.btn-danger.search-btn{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+.btn-danger.search-btn:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+    border: none;
+}
+
+#paginaActiva{
+    color: var(--rojo-pastel);
+    font-size: large;
+}
+
+.navbar-brand i{
+    color: var(--beige-pastel);
+}
+
+#textoBarra{
+    color: var(--beige-pastel);
+}
+
+#modo{
+    width: 30px;
+    font-size: 70px;
+    margin: auto;
+    cursor: pointer;
+}
+/*
+====================
+ASPECTO DE LA PAGINA
+====================
+*/
+#menuAspecto{
+    background-color: var(--verde-oscuro);
+}
+
+#textoAspecto{
+    color: var(--beige-pastel);
+    cursor: pointer;
+}
+
+#textoAspecto:hover{
+    color: var(--verde-oscuro);
+    cursor: pointer;
+}
+
+#barraBusqueda{
+    background-color: var(--beige-pastel);
+    border: none;
+}
+/*
+=========================================
+          TODAS LAS SECCIONES
+=========================================
+*/
+#section{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+    display: flex;
+}
+/*
+
+/*
+=========================================
+          PAGINA INDEX/INICIO
+=========================================
+*/
+/*
+==================
+SECCION 1 CARRUSEL
+==================
+*/
+.c-img{
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-caption h6, h3{
+    color: #386641;
+}
+
+#textoCarrusel{
+    margin-top: 5rem;
+}
+/*
+==================
+SECCION 2 CONTEXTO
+==================
+*/
+#btnContextoSeccion2{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btnContextoSeccion2:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#textoSeccion2{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+/* 
+===============
+SECCION 3 RELOJ
+===============
+*/
+#btnReloj{
+    background-color: #bc4749;
+    border: none;
+}
+
+#btnReloj:hover{
+    font-size: 110%;
+    background-color: #386641;
+}
+
+#textoHora{
+    text-align: center;
+}
+
+.reloj{
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--verde-oscuro);
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 20px ;
+}
+.tiempo{
+    letter-spacing: 0.05em;
+    font-size: 50px;
+    padding: 5px 0;
+}
+.fecha{
+    letter-spacing: 0.1em;
+    font-size: 20px;
+}
+
+/* 
+======================
+SECCION 4 PLATOS CARDS
+======================
+*/
+#cartas{
+    margin-top: 4rem;
+}
+#containerTop{
+    margin-top: 1rem;
+}
+
+#containerBottom{
+    margin-bottom: 2rem;
+}
+
+#cardBody3{
+    background-color: var(--rojo-pastel);
+}
+
+#cardTitle{
+    color: var(--beige-pastel);
+}
+
+#botonPlatos{
+    background-color: var(--verde-medio);
+    border: none;
+    color: var(--beige-pastel);
+}
+
+#botonPlatos:hover{
+    background-color: var(--beige-pastel);
+    color: var(--verde-oscuro);
+}
+/*
+==========================
+SECCION 5 CONTEXTO EVENTOS
+==========================
+*/
+#btnEventoSeccion4{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btnEventoSeccion4:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#textoEventosSeccion3{
+    text-align: justify;
+}
+/*
+=========================================
+            PAGINA PRODUCTOS
+=========================================
+*/
+/*
+=========================
+SECCION 6 CARDS PRODUCTOS
+=========================
+*/
+#cartasProductos{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+}
+
+#textoCardProducto{
+    text-align: justify;
+}
+/*
+============================
+SECCION 7 CONTEXTO PRODUCTOS
+============================
+*/
+#textoSeccion7{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+
+#imagen1Producto{
+    height: 400px;
+    width: 450px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+==============================
+SECCION 9 CONTEXTO 2 PRODUCTOS
+==============================
+*/
+#textoContexto2Producto{
+    text-align: justify;
+    margin-top: 4rem;
+}
+
+#imagen2Productos{
+    width: 500px;
+    height: 400px;
+    margin-top: 4rem;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+=======================================
+             PAGINA EVENTOS
+=======================================
+*/
+/*
+==========================
+SECCION 10 CONTEXTO EVENTO
+==========================
+*/
+#textoContextoEventos{
+    text-align: justify;
+    margin-top: 2rem;
+}
+/*
+=======================
+SECCION 11 CARDS EVENTO
+=======================
+*/
+#cardtextEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    text-align: justify;
+}
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+============================
+SECCION 13 CONTEXTO 2 EVENTO
+============================
+*/
+#textoContexto2Eventos{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+#btnContextoEventos{
+    background-color: var(--verde-oscuro);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btnContextoEventos:hover{
+    background-color: var(--rojo-pastel);
+}
+/*
+=====================================
+           PAGINA NOSOTROS
+=====================================
+*/
+/*
+============================
+SECCION 16 CONTEXTO NOSOTROS
+============================
+*/
+#textoSeccion16{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#imagen1Nosotros{
+    height: 400px;
+    width: 550px;
+}
+
+#textoNosotros{
+    text-align: justify;
+}
+/*
+/*
+=====================================
+           PAGINA CONTACTO
+=====================================
+*/
+/*El estilo del reloj es el mismo de la pagina inicio*/
+/*
+=====================
+SECCION 18 FORMULARIO
+=====================
+*/
+
+#btnFormulario{
+    background-color: #386641;
+    color: var(--beige-pastel);
+    border: none;
+}
+
+#btnFormulario:hover{
+    background-color: var(--rojo-pastel);
+    color: var(--beige-pastel);
+    border: none;
+}
+
+/*
+
+========================
+        FOOTER 
+========================
+*/
+.footer-img{
+    width: 100px;
+    height: 50px;
+}
+
+.site-footer{
+    background: var(--verde-oscuro);
+}
+
+footer *{
+    color: var(--beige-pastel);
+    background-color: var(--verde-oscuro);
+}
+
+footer h5,a{
+    color: var(--beige-pastel);
+}
+
+footer img{
+    height: 100px;
+}
+
+.text-white{
+    text-decoration: none;
+}
+
+.f-text{
+    color: var(--beige-pastel);
+}
+
+.f-text:hover{
+    color: #bc4749;
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+#boton-nav{
+    background-color: #bc4749;
+    border: #bc4749;
+}
+
+#boton-nav:hover{
+    background-color: beige;
+    border: beige;
+    color: #bc4749;
+}
+
+/*
+===============
+ESTILO DEL MAPA
+===============
+*/
+#myMap{
+    height: 250px;
+    width: 500px;
+}
+
+/*
+==============================
+ESTILO DE LA TARJETA DEL CLIMA
+==============================
+*/
+
+.weather-icon{
+    width: 110px;
+    margin-top: 10px;
+}
+
+.weather h6{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#texto-humedad{
+    margin-right: 40px;
+}
+
+#texto-viento{
+    margin-top: 14px;
+}
+
+#carta-clima{
+    width: 110%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #6a994e, #a7c957);
+    color: #f2e8cf;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+#ciudad{
+    color: var(--beige-pastel);
+}
