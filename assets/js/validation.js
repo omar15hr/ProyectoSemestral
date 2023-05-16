@@ -173,11 +173,10 @@ $.ajax({
     }
   });
 
-//FUNCION FORMULARIO
-document.getElementById("error_nombre_vacio").style.display="none";
+
 
   //FORMULARIO
-  document.getElementById("error_nombre_vacio").style.display="none";
+document.getElementById("error_nombre_vacio").style.display="none";
 document.getElementById("error_nombre_size").style.display="none";
 document.getElementById("error_pApellido_vacio").style.display="none";
 document.getElementById("error_pApellido_size").style.display="none";
@@ -191,7 +190,6 @@ document.getElementById("error_tel_limit").style.display="none";
 document.getElementById("error_mail_vacio").style.display="none";
 document.getElementById("error_mail_reg").style.display="none";
 document.getElementById("error_servicio").style.display="none";
-document.getElementById("error_comentario").style.display="none";
 document.getElementById("error_codPromo_reg").style.display="none";
 document.getElementById("error_metodopago_vacio").style.display="none";
 
@@ -202,7 +200,6 @@ function validarFormulario(){
     let telefonoFormulario = document.getElementById('telefonoFormulario').value;
     let emailFormulario = document.getElementById('emailFormulario').value;
     let rut = document.getElementById('rut').value;
-    let comentarioFormulario = document.getElementById('comentarioFormulario').value;
     let tipoServicio = document.getElementById("tipoServicio").value;
     let codPromo = document.getElementById("codPromo").value;
     let metodoPago = document.getElementsByName("metodoPago");
@@ -341,18 +338,23 @@ function validarFormulario(){
         document.getElementById("metodoPago").classList.add("is-valid");
     }
 
-    //com
-    if (comentarioFormulario.length==0){
-        document.getElementById("error_comentario").style.display="inline";
-        document.getElementById("comentarioFormulario").classList.add("is-invalid");
-    }else{
-        document.getElementById("error_comentario").style.display="none";
-        document.getElementById("comentarioFormulario").classList.remove("is-invalid");
-        document.getElementById("comentarioFormulario").classList.add("is-valid");
-    }
+    
 
 }
 
+//contador de caracteres
+function contadorTextarea(obj){
+    let maxC = 50;
+    let strC = obj.value.length;
+    let numC = (maxC - strC);
+    let contadorComentario = document.getElementById("contadorComentario");
+
+    if(numC<0){
+        contadorComentario.innerHTML = '<span style="color: red;">Ha excedido el límite de '+maxC+' caracteres.</span>';
+    }else{
+        contadorComentario.innerHTML = numC +' caracteres restantes.';
+    }
+}
 
 
 
