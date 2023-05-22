@@ -190,11 +190,11 @@
 
                 <div class="mb-3">
                   <label for="comentarioFormulario" class="mb-3">Comentarios:</label>
-                  <textarea class="form-control" onblur="validarFormulario()" maxlength="100" id="comentarioFormulario" name="comentarioFormulario" placeholder="Escriba las indicaciones para el pedido en este apartado."></textarea>
+                  <textarea class="form-control" onkeyup="contadorTextarea(this)" maxlength="50" id="comentarioFormulario" name="comentarioFormulario" placeholder="Escriba las indicaciones para el pedido en este apartado."></textarea>
+                  <p id="contadorComentario">50 caracteres restantes.</p>
                   <small id="error_comentario" class="text-danger">Debe ingresar un comentario.</small>
-                  
                 </div>
-            
+                
 
             
             
